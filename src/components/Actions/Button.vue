@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed, inject } from "vue";
 import { type Variant, useVariantMapping } from "@/composables/useVariantProps";
 import { type Size, useSizeMapping } from "@/composables/useSizeProps";
 
@@ -36,6 +36,9 @@ const props = withDefaults(
     block: false,
   },
 );
+
+const isInDropdownTrigger = inject('isDropdownTrigger', false);
+
 const { sizeClass } = useSizeMapping(props, "btn");
 const { colorClass } = useVariantMapping(props, "btn");
 const softClass = computed(() => {
@@ -70,24 +73,38 @@ const blockClass = computed(() => {
 });
 </script>
 <template>
-  <button
-    :disabled="disabled"
-    :class="[
-      'btn',
-      sizeClass,
-      colorClass,
-      softClass,
-      outlineClass,
-      dashClass,
-      activeClass,
-      ghostClass,
-      linkClass,
-      wideClass,
-      squareClass,
-      circleClass,
-      blockClass,
-    ]"
-  >
+  <button v-if="!isInDropdownTrigger" :disabled="disabled" :class="[
+    'btn',
+    sizeClass,
+    colorClass,
+    softClass,
+    outlineClass,
+    dashClass,
+    activeClass,
+    ghostClass,
+    linkClass,
+    wideClass,
+    squareClass,
+    circleClass,
+    blockClass,
+  ]">
     <slot></slot>
   </button>
+  <div v-else tabindex="0" role="button" :class="[
+    'btn',
+    sizeClass,
+    colorClass,
+    softClass,
+    outlineClass,
+    dashClass,
+    activeClass,
+    ghostClass,
+    linkClass,
+    wideClass,
+    squareClass,
+    circleClass,
+    blockClass,
+  ]">
+    <slot></slot>
+  </div>
 </template>
