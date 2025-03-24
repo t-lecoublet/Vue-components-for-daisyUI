@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, provide } from "vue";
 
-// Définition des types pour les props
 const props = withDefaults(
   defineProps<{
     hover?: boolean;
