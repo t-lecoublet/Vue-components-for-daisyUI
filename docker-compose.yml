@@ -1,0 +1,10 @@
+services:
+  web:
+    image: node:23
+    ports:
+      - "5173:5173"
+      - "6006:6006"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash -c "npm install && npm run dev"
