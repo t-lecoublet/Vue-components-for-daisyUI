@@ -1,19 +1,24 @@
 <script setup lang="ts">
 import { computed, ref, onMounted, watch } from "vue";
 
-// Définition des types pour les props
 const props = withDefaults(
     defineProps<{
         id?: string;
         open?: boolean;
-        placement?: "top" | "middle" | "bottom" | "start" | "end";
-        backdropClose?: boolean;
+        closeButton?: boolean;
+        closeOnEscape?: boolean;
+        closeBackdrop?: boolean;
+        placement?: "top" | "middle" | "bottom" | "start" | "end" | "responsive";
+        classBox?: string;
     }>(),
     {
         id: undefined,
         open: false,
+        closeButton: false,
+        closeOnEscape: true,
+        closeBackdrop: true,
         placement: "middle",
-        backdropClose: true
+        classBox: "",
     }
 );
 
@@ -31,12 +36,13 @@ const placementClass = computed(() => {
             return "modal-start";
         case "end":
             return "modal-end";
+        case "responsive":
+            return "modal-bottom sm:modal-middle"
         default:
             return "";
     }
 });
 
-// Méthodes pour contrôler le modal
 const showModal = () => {
     if (dialogRef.value) {
         dialogRef.value.showModal();
@@ -49,7 +55,6 @@ const closeModal = () => {
     }
 };
 
-// Exposer les méthodes pour les utiliser depuis le parent
 defineExpose({
     showModal,
     closeModal
@@ -68,16 +73,26 @@ watch(() => props.open, (newValue: boolean) => {
         closeModal();
     }
 });
+
+function handleEscapeKey(event: KeyboardEvent) {
+    if (props.closeOnEscape) {
+        closeModal();
+    }
+}
+
 </script>
 
 <template>
-    <dialog ref="dialogRef" :id="id" :class="['modal', placementClass]">
-        <div class="modal-box">
+    <dialog ref="dialogRef" :id="id" :class="['modal', placementClass]" @keydown.esc.prevent="handleEscapeKey">
+        <div :class="['modal-box', classBox]">
+            <form v-if="closeButton" method="dialog">
+                <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+            </form>
             <slot></slot>
             <slot name="actions" class="modal-action">
             </slot>
         </div>
-        <form v-if="backdropClose" method="dialog" class="modal-backdrop">
+        <form v-if="closeBackdrop" method="dialog" class="modal-backdrop">
             <button>Close</button>
         </form>
     </dialog>
