@@ -12,7 +12,7 @@ const props = withDefaults(
         modelValue: false,
         rotate: false,
         flip: false,
-        useCheckbox: true
+        useCheckbox: true,
     }
 );
 
@@ -31,7 +31,7 @@ const classes = computed(() => ({
 
 <template>
     <label v-if="useCheckbox" class="swap" :class="classes">
-        <input type="checkbox" v-model="isActive" />
+        <input type="checkbox" v-model="isActive" :indeterminate="$slots.indeterminate ? true : false" />
         <div class="swap-on">
             <slot name="on" />
         </div>
@@ -48,9 +48,6 @@ const classes = computed(() => ({
         </div>
         <div class="swap-off">
             <slot name="off" />
-        </div>
-        <div v-if="$slots.indeterminate" class="swap-indeterminate">
-            <slot name="indeterminate" />
         </div>
     </div>
 </template>

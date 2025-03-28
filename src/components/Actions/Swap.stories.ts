@@ -42,7 +42,7 @@ export const Default: Story = {
             return { args };
         },
         template: `
-      <Swap v-bind="args" v-model="args.modelValue">
+      <Swap v-bind="args" v-model="args.modelValue" class="text-4xl">
         <template #on>ON</template>
         <template #off>OFF</template>
       </Swap>
@@ -60,7 +60,7 @@ export const WithRotate: Story = {
             return { args };
         },
         template: `
-      <Swap v-bind="args" v-model="args.modelValue">
+      <Swap v-bind="args" v-model="args.modelValue" class="text-4xl">
         <template #on>🌞</template>
         <template #off>🌜</template>
       </Swap>
@@ -78,7 +78,7 @@ export const WithFlip: Story = {
             return { args };
         },
         template: `
-      <Swap v-bind="args" v-model="args.modelValue">
+      <Swap v-bind="args" v-model="args.modelValue" class="text-4xl">
         <template #on>🥞</template>
         <template #off>🍔</template>
       </Swap>
@@ -112,7 +112,7 @@ export const WithIndeterminate: Story = {
             return { args };
         },
         template: `
-      <Swap v-bind="args" v-model="args.modelValue">
+      <Swap v-bind="args" v-model="args.modelValue" class="text-4xl">
         <template #on>ON</template>
         <template #off>OFF</template>
         <template #indeterminate>INDETERMINATE</template>
