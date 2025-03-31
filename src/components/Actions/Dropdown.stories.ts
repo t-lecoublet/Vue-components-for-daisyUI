@@ -3,7 +3,6 @@ import Dropdown from "@/components/Actions/Dropdown.vue";
 import Button from "@/components/Actions/Button.vue";
 import Menu from "@/components/Navigation/Menu.vue";
 
-
 const meta: Meta<typeof Dropdown> = {
   title: "Components/Actions/Dropdown",
   component: Dropdown,

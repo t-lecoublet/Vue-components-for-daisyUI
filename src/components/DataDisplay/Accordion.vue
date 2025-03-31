@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, provide } from 'vue';
+import { computed, provide } from "vue";
 
 interface AccordionItem {
   title?: string;
@@ -12,36 +12,48 @@ const props = withDefaults(
   defineProps<{
     items?: AccordionItem[];
     name?: string;
-    modifier?: 'collapse-arrow' | 'collapse-plus' | 'collapse-open' | 'collapse-close';
+    modifier?:
+      | "collapse-arrow"
+      | "collapse-plus"
+      | "collapse-open"
+      | "collapse-close";
     customClass?: string;
-  }>(), {
+  }>(),
+  {
     items: undefined,
-    name: 'accordion',
+    name: "accordion",
     modifier: undefined,
-    customClass: ''
-  }
+    customClass: "",
+  },
 );
 
 const accordionName = computed(() => {
-  return props.name || `accordion-${Math.random().toString(36).substring(2, 9)}`;
+  return (
+    props.name || `accordion-${Math.random().toString(36).substring(2, 9)}`
+  );
 });
 
 // Provide the accordion name to child components
-provide('accordionName', accordionName.value);
+provide("accordionName", accordionName.value);
 </script>
 
 <template>
   <!-- Dynamic items mode -->
   <template v-if="items">
-    <div 
-      v-for="(item, index) in items" 
-      :key="index" 
-      :class="['collapse', 'bg-base-100 border border-base-300', modifier, item.customClass || customClass]"
+    <div
+      v-for="(item, index) in items"
+      :key="index"
+      :class="[
+        'collapse',
+        'bg-base-100 border border-base-300',
+        modifier,
+        item.customClass || customClass,
+      ]"
     >
-      <input 
-        type="radio" 
-        :name="accordionName" 
-        :checked="item.checked ? 'checked' : undefined" 
+      <input
+        type="radio"
+        :name="accordionName"
+        :checked="item.checked ? 'checked' : undefined"
       />
       <div class="collapse-title">
         <slot name="title" :item="item" :index="index">
@@ -59,9 +71,9 @@ provide('accordionName', accordionName.value);
       </div>
     </div>
   </template>
-  
+
   <!-- Manual mode -->
   <template v-else>
     <slot></slot>
   </template>
-</template> 
+</template>

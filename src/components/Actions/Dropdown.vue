@@ -5,16 +5,23 @@ const props = withDefaults(
   defineProps<{
     hover?: boolean;
     open?: boolean;
-    placement?: "start" | "center" | "end" | "top" | "bottom" | "left" | "right";
+    placement?:
+      | "start"
+      | "center"
+      | "end"
+      | "top"
+      | "bottom"
+      | "left"
+      | "right";
   }>(),
   {
     hover: false,
     open: false,
     placement: "bottom",
-  }
+  },
 );
 
-provide('isDropdownTrigger', true);
+provide("isDropdownTrigger", true);
 
 const placementClass = computed(() => {
   switch (props.placement) {
@@ -44,7 +51,6 @@ const hoverClass = computed(() => {
 const openClass = computed(() => {
   return props.open ? "dropdown-open" : "";
 });
-
 </script>
 
 <template>

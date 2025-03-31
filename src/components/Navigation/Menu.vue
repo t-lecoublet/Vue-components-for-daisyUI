@@ -16,7 +16,7 @@ const props = withDefaults(
   },
 );
 
-const isInDropdownTrigger = inject('isDropdownTrigger', false);
+const isInDropdownTrigger = inject("isDropdownTrigger", false);
 
 const directionClass = computed(() => {
   return {
@@ -31,12 +31,14 @@ const roundedClass = computed(() => {
   return props.rounded ? "rounded-box" : "[&_li>*]:rounded-none p-0";
 });
 const inDropdownClass = computed(() => {
-  return isInDropdownTrigger ? "bg-base-100 shadow-sm" : "bg-base-200"
-})
+  return isInDropdownTrigger ? "bg-base-100 shadow-sm" : "bg-base-200";
+});
 </script>
 
 <template>
-  <ul :class="['menu', inDropdownClass, roundedClass, directionClass, sizeClass]">
+  <ul
+    :class="['menu', inDropdownClass, roundedClass, directionClass, sizeClass]"
+  >
     <slot />
   </ul>
 </template>

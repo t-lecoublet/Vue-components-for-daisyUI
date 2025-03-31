@@ -1,50 +1,60 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
-import Accordion from './Accordion.vue';
-import Button from '@/components/Actions/Button.vue';
-import AccordionItem from './AccordionItem.vue';
+import type { Meta, StoryObj } from "@storybook/vue3";
+import Accordion from "./Accordion.vue";
+import Button from "@/components/Actions/Button.vue";
+import AccordionItem from "./AccordionItem.vue";
 
 const meta = {
-    title: 'Components/DataDisplay/Accordion',
-    component: Accordion,
-    argTypes: {
-        items: {
-            control: 'object',
-            description: 'Array of accordion items with title, content and checked properties'
-        },
-        name: {
-            control: 'text',
-            description: 'Name attribute for the radio inputs (must be unique for each accordion group)'
-        },
-        modifier: {
-            control: { type: 'select' },
-            options: [undefined, 'collapse-arrow', 'collapse-plus', 'collapse-open', 'collapse-close'],
-            description: 'Optional modifier class for the accordion'
-        },
-        customClass: {
-            control: 'text',
-            description: 'Custom class to apply to all collapse elements'
-        }
+  title: "Components/DataDisplay/Accordion",
+  component: Accordion,
+  argTypes: {
+    items: {
+      control: "object",
+      description:
+        "Array of accordion items with title, content and checked properties",
     },
-    args: {
-        items: [
-            {
-                title: 'Item 1',
-                content: 'Content of item 1. Click on another item to close this one.',
-                checked: true
-            },
-            {
-                title: 'Item 2',
-                content: 'Content of item 2. The accordion allows you to show and hide content, but only one item can remain open at a time.'
-            },
-            {
-                title: 'Item 3',
-                content: 'Content of item 3. All radio buttons with the same name work together.'
-            }
-        ],
-        name: 'accordion-example',
-        modifier: undefined,
-        customClass: ''
-    }
+    name: {
+      control: "text",
+      description:
+        "Name attribute for the radio inputs (must be unique for each accordion group)",
+    },
+    modifier: {
+      control: { type: "select" },
+      options: [
+        undefined,
+        "collapse-arrow",
+        "collapse-plus",
+        "collapse-open",
+        "collapse-close",
+      ],
+      description: "Optional modifier class for the accordion",
+    },
+    customClass: {
+      control: "text",
+      description: "Custom class to apply to all collapse elements",
+    },
+  },
+  args: {
+    items: [
+      {
+        title: "Item 1",
+        content: "Content of item 1. Click on another item to close this one.",
+        checked: true,
+      },
+      {
+        title: "Item 2",
+        content:
+          "Content of item 2. The accordion allows you to show and hide content, but only one item can remain open at a time.",
+      },
+      {
+        title: "Item 3",
+        content:
+          "Content of item 3. All radio buttons with the same name work together.",
+      },
+    ],
+    name: "accordion-example",
+    modifier: undefined,
+    customClass: "",
+  },
 } satisfies Meta<typeof Accordion>;
 
 export default meta;
@@ -53,54 +63,54 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const WithArrow: Story = {
-    args: {
-        modifier: 'collapse-arrow'
-    }
+  args: {
+    modifier: "collapse-arrow",
+  },
 };
 
 export const WithPlus: Story = {
-    args: {
-        modifier: 'collapse-plus'
-    }
+  args: {
+    modifier: "collapse-plus",
+  },
 };
 
 export const WithCustomClass: Story = {
-    args: {
-        customClass: 'border-primary',
-        items: [
-            {
-                title: 'Item 1',
-                content: 'Content with custom class',
-                checked: true
-            },
-            {
-                title: 'Item 2',
-                content: 'Content with custom class',
-                customClass: 'border border-secondary'
-            }
-        ]
-    }
+  args: {
+    customClass: "border-primary",
+    items: [
+      {
+        title: "Item 1",
+        content: "Content with custom class",
+        checked: true,
+      },
+      {
+        title: "Item 2",
+        content: "Content with custom class",
+        customClass: "border border-secondary",
+      },
+    ],
+  },
 };
 
 export const WithCustomSlots: Story = {
-    render: (args) => ({
-        components: { Accordion, Button },
-        setup() {
-            const items = [
-                {
-                    title: 'Custom title 1',
-                    content: 'Custom content 1',
-                    checked: true
-                },
-                {
-                    title: 'Custom title 2',
-                    content: 'Custom content 2'
-                }
-            ];
-            
-            return { items };
+  render: (args) => ({
+    components: { Accordion, Button },
+    setup() {
+      const items = [
+        {
+          title: "Custom title 1",
+          content: "Custom content 1",
+          checked: true,
         },
-        template: `
+        {
+          title: "Custom title 2",
+          content: "Custom content 2",
+        },
+      ];
+
+      return { items };
+    },
+    template: `
       <div class="flex flex-col gap-2">
         <Accordion :items="items" name="custom-slots" modifier="collapse-arrow">
           <template #title-0="{ item }">
@@ -117,33 +127,33 @@ export const WithCustomSlots: Story = {
           </template>
         </Accordion>
       </div>
-    `
-    })
+    `,
+  }),
 };
 
 export const WithGlobalSlots: Story = {
-    render: (args) => ({
-        components: { Accordion, Button },
-        setup() {
-            const items = [
-                {
-                    title: 'First item',
-                    content: 'Content of the first item',
-                    checked: true
-                },
-                {
-                    title: 'Second item',
-                    content: 'Content of the second item'
-                },
-                {
-                    title: 'Third item',
-                    content: 'Content of the third item'
-                }
-            ];
-            
-            return { items };
+  render: (args) => ({
+    components: { Accordion, Button },
+    setup() {
+      const items = [
+        {
+          title: "First item",
+          content: "Content of the first item",
+          checked: true,
         },
-        template: `
+        {
+          title: "Second item",
+          content: "Content of the second item",
+        },
+        {
+          title: "Third item",
+          content: "Content of the third item",
+        },
+      ];
+
+      return { items };
+    },
+    template: `
       <div class="flex flex-col gap-2">
         <Accordion :items="items" name="global-slots" modifier="collapse-arrow">
           <template #title="{ item, index }">
@@ -161,42 +171,41 @@ export const WithGlobalSlots: Story = {
           </template>
         </Accordion>
       </div>
-    `
-    })
+    `,
+  }),
 };
 
 export const MultipleGroups: Story = {
-    render: (args) => ({
-        components: { Accordion },
-        setup() {
-            const firstGroup = [
-                {
-                    title: 'Group 1 - Item 1',
-                    content: 'Content of the first group, item 1',
-                    checked: true,
-                },
-                {
-                    title: 'Group 1 - Item 2',
-                    content: 'Content of the first group, item 2',
-
-                }
-            ];
-
-            const secondGroup = [
-                {
-                    title: 'Group 2 - Item 1',
-                    content: 'Content of the second group, item 1',
-                    checked: true
-                },
-                {
-                    title: 'Group 2 - Item 2',
-                    content: 'Content of the second group, item 2'
-                }
-            ];
-
-            return { firstGroup, secondGroup };
+  render: (args) => ({
+    components: { Accordion },
+    setup() {
+      const firstGroup = [
+        {
+          title: "Group 1 - Item 1",
+          content: "Content of the first group, item 1",
+          checked: true,
         },
-        template: `
+        {
+          title: "Group 1 - Item 2",
+          content: "Content of the first group, item 2",
+        },
+      ];
+
+      const secondGroup = [
+        {
+          title: "Group 2 - Item 1",
+          content: "Content of the second group, item 1",
+          checked: true,
+        },
+        {
+          title: "Group 2 - Item 2",
+          content: "Content of the second group, item 2",
+        },
+      ];
+
+      return { firstGroup, secondGroup };
+    },
+    template: `
       <div class="flex flex-col gap-2" >
         <h3 class="mb-4">First accordion group</h3>
         <div class="join join-vertical" >
@@ -206,17 +215,17 @@ export const MultipleGroups: Story = {
         <h3 class="mt-8 mb-4">Second accordion group</h3>
         <Accordion :items="secondGroup" name="group2" modifier="collapse-plus" />
       </div>
-    `
-    })
+    `,
+  }),
 };
 
 export const ManualMode: Story = {
-    render: (args) => ({
-        components: { Accordion, AccordionItem, Button },
-        setup() {
-            return { args };
-        },
-        template: `
+  render: (args) => ({
+    components: { Accordion, AccordionItem, Button },
+    setup() {
+      return { args };
+    },
+    template: `
       <div class="flex flex-col gap-2">
         <Accordion name="manual-accordion" modifier="collapse-arrow">
           <AccordionItem :checked="true" customClass="border-primary">
@@ -253,6 +262,6 @@ export const ManualMode: Story = {
           </AccordionItem>
         </Accordion>
       </div>
-    `
-    })
-}; 
+    `,
+  }),
+};

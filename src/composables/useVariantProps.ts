@@ -123,6 +123,18 @@ const statusVariants = {
   error: "status-error",
 };
 
+const chatBubbleVariants = {
+  default: "",
+  primary: "chat-bubble-primary",
+  secondary: "chat-bubble-secondary",
+  accent: "chat-bubble-accent",
+  neutral: "chat-bubble-neutral",
+  info: "chat-bubble-info",
+  success: "chat-bubble-success",
+  warning: "chat-bubble-warning",
+  error: "chat-bubble-error",
+};
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;

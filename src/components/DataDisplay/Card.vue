@@ -20,7 +20,7 @@ const props = withDefaults(
     imageFull: false,
     responsive: false,
     title: "",
-  }
+  },
 );
 
 const { sizeClass } = useSizeMapping(props, "card");
@@ -59,25 +59,28 @@ const imageFullClass = computed(() => {
     ]"
   >
     <slot name="figure"></slot>
-    
+
     <template v-if="$slots.body">
       <slot name="body"></slot>
       <slot name="default"></slot>
     </template>
-    
-    <div v-else-if="$slots.title || $slots.actions || $slots.default || title" class="card-body">
+
+    <div
+      v-else-if="$slots.title || $slots.actions || $slots.default || title"
+      class="card-body"
+    >
       <h2 v-if="title || $slots.title" class="card-title">
         <template v-if="title">{{ title }}</template>
         <slot name="title"></slot>
       </h2>
-      
+
       <slot></slot>
-      
+
       <div v-if="$slots.actions" class="card-actions">
         <slot name="actions"></slot>
       </div>
     </div>
-    
+
     <slot name="content"></slot>
   </div>
-</template> 
+</template>

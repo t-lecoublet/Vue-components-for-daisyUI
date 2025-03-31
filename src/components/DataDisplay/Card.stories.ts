@@ -640,4 +640,4 @@ const CardDashTemplate: Story = {
     dash: true,
   },
 };
-export const CardDash = { ...CardDashTemplate }; 
+export const CardDash = { ...CardDashTemplate };

@@ -184,11 +184,11 @@ const ModalPlacementsTemplate: Story = {
         showMiddleModal,
         showBottomModal,
         showStartModal,
-        showEndModal
+        showEndModal,
       };
     },
     template: placementsTplStr,
   }),
   args: {},
 };
-export const ModalPlacements = { ...ModalPlacementsTemplate }; 
+export const ModalPlacements = { ...ModalPlacementsTemplate };

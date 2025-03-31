@@ -82,7 +82,7 @@ export function useSizeMapping(props: { size: Size }, suffix: string) {
     const sizeClass = computed(() => avatarSizes[props.size]);
     return { sizeClass };
   }
-  
+
   if (suffix === "card") {
     const sizeClass = computed(() => cardSizes[props.size]);
     return { sizeClass };
