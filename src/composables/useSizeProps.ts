@@ -68,10 +68,23 @@ const avatarSizes = {
   lg: "size-24",
   xl: "size-32",
 };
+const cardSizes = {
+  default: "",
+  xs: "card-xs",
+  sm: "card-sm",
+  md: "card-md",
+  lg: "card-lg",
+  xl: "card-xl",
+};
 
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);
+    return { sizeClass };
+  }
+  
+  if (suffix === "card") {
+    const sizeClass = computed(() => cardSizes[props.size]);
     return { sizeClass };
   }
 
