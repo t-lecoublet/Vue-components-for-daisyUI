@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Swap from "./Swap.vue";
+import Swap from "@/components/Actions/Swap.vue";
 
 const meta = {
   title: "Components/Actions/Swap",

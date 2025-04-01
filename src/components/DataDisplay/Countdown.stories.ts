@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ref } from "vue";
-import Countdown from "./Countdown.vue";
-import CountdownGroup from "./CountdownGroup.vue";
+import Countdown from "@/components/DataDisplay/Countdown.vue";
+import CountdownGroup from "@/components/DataDisplay/CountdownGroup.vue";
 import Button from "@/components/Actions/Button.vue";
 
 const meta = {

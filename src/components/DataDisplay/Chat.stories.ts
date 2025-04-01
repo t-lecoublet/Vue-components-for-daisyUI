@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Chat from "./Chat.vue";
-import ChatItem from "./ChatItem.vue";
+import Chat from "@/components/DataDisplay/Chat.vue";
+import ChatItem from "@/components/DataDisplay/ChatItem.vue";
 import Badge from "@/components/DataDisplay/Badge.vue";
 
 const meta = {

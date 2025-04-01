@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Collapse from "./Collapse.vue";
+import Collapse from "@/components/DataDisplay/Collapse.vue";
 import Button from "@/components/Actions/Button.vue";
 
 const meta = {
