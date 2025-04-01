@@ -105,7 +105,7 @@ const ColorsTooltipTplStr = `
 // DEFAULT TOOLTIP
 
 const DefaultTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -120,7 +120,7 @@ export const DefaultTooltip = { ...DefaultTooltipTemplate };
 // WITH TOOLTIP CONTENT
 
 const WithTooltipContentTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button, Alert },
     setup() {
       return { args };
@@ -133,7 +133,7 @@ export const WithTooltipContent = { ...WithTooltipContentTemplate };
 // FORCE OPEN
 
 const ForceOpenTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -146,7 +146,7 @@ export const ForceOpenTooltip = { ...ForceOpenTooltipTemplate };
 // TOP TOOLTIP
 
 const TopTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -159,7 +159,7 @@ export const TopTooltip = { ...TopTooltipTemplate };
 // BOTTOM TOOLTIP
 
 const BottomTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -172,7 +172,7 @@ export const BottomTooltip = { ...BottomTooltipTemplate };
 // LEFT TOOLTIP
 
 const LeftTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -185,7 +185,7 @@ export const LeftTooltip = { ...LeftTooltipTemplate };
 // RIGHT TOOLTIP
 
 const RightTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };
@@ -198,7 +198,7 @@ export const RightTooltip = { ...RightTooltipTemplate };
 // COLORS TOOLTIP
 
 const ColorsTooltipTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Tooltip, Button },
     setup() {
       return { args };

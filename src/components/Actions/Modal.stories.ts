@@ -96,7 +96,7 @@ const placementsTplStr = `
 // DEFAULT MODAL
 
 const TemplateModal: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Modal, Button },
     setup() {
       const modalRef = ref<InstanceType<typeof Modal> | null>(null);
@@ -118,7 +118,7 @@ export const DefaultModal = { ...TemplateModal };
 // MODAL WITH ACTIONS
 
 const ModalWithActionsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Modal, Button },
     setup() {
       const modalRef = ref<InstanceType<typeof Modal> | null>(null);
@@ -144,7 +144,7 @@ export const ModalWithActions = { ...ModalWithActionsTemplate };
 // MODAL PLACEMENTS
 
 const ModalPlacementsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Modal, Button },
     setup() {
       const topModalRef = ref<InstanceType<typeof Modal> | null>(null);

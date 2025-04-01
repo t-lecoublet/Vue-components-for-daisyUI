@@ -36,7 +36,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {},
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Swap },
     setup() {
       return { args };
@@ -54,7 +54,7 @@ export const WithRotate: Story = {
   args: {
     rotate: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Swap },
     setup() {
       return { args };
@@ -72,7 +72,7 @@ export const WithFlip: Story = {
   args: {
     flip: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Swap },
     setup() {
       return { args };
@@ -88,7 +88,7 @@ export const WithFlip: Story = {
 
 export const WithClassName: Story = {
   args: {},
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Swap },
     setup() {
       return { args };
@@ -106,7 +106,7 @@ export const WithIndeterminate: Story = {
   args: {
     useCheckbox: true,
   },
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Swap },
     setup() {
       return { args };

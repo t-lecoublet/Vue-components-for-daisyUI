@@ -140,7 +140,7 @@ const DisabledSelectTplStr = `
 // DEFAULT
 
 const DefaultSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };
@@ -154,7 +154,7 @@ export const DefaultSelect = { ...DefaultSelectTemplate };
 // GHOST SELECT
 
 const GhostSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };
@@ -167,7 +167,7 @@ export const GhostSelect = { ...GhostSelectTemplate };
 // SELECT WITH FIELDSET
 
 const SelectWithFieldsetTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };
@@ -180,7 +180,7 @@ export const SelectWithFieldset = { ...SelectWithFieldsetTemplate };
 // COLORS SELECT
 
 const ColorsSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };
@@ -193,7 +193,7 @@ export const ColorsSelect = { ...ColorsSelectTemplate };
 // SIZES SELECT
 
 const SizesSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };
@@ -206,7 +206,7 @@ export const SizesSelect = { ...SizesSelectTemplate };
 // DISABLED SELECT
 
 const DisabledSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Select },
     setup() {
       return { args };

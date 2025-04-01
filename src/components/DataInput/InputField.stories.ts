@@ -79,7 +79,7 @@ const TextInputWithDataListSuggestionTplStr = `
 // DEFAULT
 
 const DefaultInputFieldTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField },
     setup() {
       return { args };
@@ -93,7 +93,7 @@ export const DefaultInputField = { ...DefaultInputFieldTemplate };
 // TEXT INPUT WITH LABEL INSIDE
 
 const TextInputWithLabelInsideTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField, Label, Kbd, Badge, SearchIcon, FileIcon },
     setup() {
       return { args };
@@ -114,7 +114,7 @@ GhostStyle.args = {
 // WITH FIELDSET AND FIELDSET LEGEND
 
 const WithFieldsetAndFieldsetLegendTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField, Fieldset, Label },
     setup() {
       return { args };
@@ -130,7 +130,7 @@ WithFieldsetAndFieldsetLegend.args = {};
 // COLORS INPUT
 
 const ColorsInputTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField },
     setup() {
       return { args };
@@ -144,7 +144,7 @@ ColorsInput.args = {};
 // SIZES INPUT
 
 const SizesInputTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField },
     setup() {
       return { args };
@@ -158,7 +158,7 @@ SizesInput.args = {};
 // DISABLED INPUT
 
 const DisabledInputTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField },
     setup() {
       return { args };
@@ -172,7 +172,7 @@ DisabledInput.args = {};
 // TEXT INPUT WITH DATA LIST SUGGESTION
 
 const TextInputWithDataListSuggestionTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { InputField },
     setup() {
       return { args };

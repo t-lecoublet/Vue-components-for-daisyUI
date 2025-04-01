@@ -42,7 +42,7 @@ const StatusWithBounceAnimationTplStr = `
 // DEFAULT
 
 const DefaultTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Status },
     setup() {
       return { args };
@@ -57,7 +57,7 @@ Default.args = {};
 // STATUS SIZES
 
 const StatusSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Status },
     setup() {
       return { args };
@@ -72,7 +72,7 @@ StatusSizes.args = {};
 // STATUS COLOR
 
 const StatusWithColorsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Status },
     setup() {
       return { args };
@@ -86,7 +86,7 @@ StatusWithColors.args = {};
 
 // STATUS WITH PING ANIMATION
 const StatusWithPingAnimationTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Status },
     setup() {
       return { args };
@@ -98,7 +98,7 @@ export const StatusWithPingAnimation = { ...StatusWithPingAnimationTemplate };
 
 // STATUS WITH BOUNCE ANIMATION
 const StatusWithBounceAnimationTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Status },
     setup() {
       return { args };

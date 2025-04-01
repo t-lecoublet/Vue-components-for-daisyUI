@@ -141,7 +141,7 @@ const openTplStr = `
 // DEFAULT DROPDOWN
 
 const TemplateDropdown: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Dropdown, Button, Menu },
     setup() {
       return { args };
@@ -155,7 +155,7 @@ export const DefaultDropdown = { ...TemplateDropdown };
 // DROPDOWN PLACEMENTS
 
 const DropdownPlacementsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Dropdown, Button, Menu },
     setup() {
       return { args };
@@ -169,7 +169,7 @@ export const DropdownPlacements = { ...DropdownPlacementsTemplate };
 // DROPDOWN ALIGNMENTS
 
 const DropdownAlignmentsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Dropdown, Button, Menu },
     setup() {
       return { args };
@@ -183,7 +183,7 @@ export const DropdownAlignments = { ...DropdownAlignmentsTemplate };
 // DROPDOWN HOVER
 
 const DropdownHoverTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Dropdown, Button, Menu },
     setup() {
       return { args };
@@ -197,7 +197,7 @@ export const DropdownHover = { ...DropdownHoverTemplate };
 // DROPDOWN OPEN
 
 const DropdownOpenTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Dropdown, Button, Menu },
     setup() {
       return { args };

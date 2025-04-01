@@ -96,7 +96,7 @@ const ArrowKeysTplStr = `
 // DEFAULT
 
 const DefaultTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -111,7 +111,7 @@ Default.args = {};
 // KBD SIZES
 
 const KbdSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -125,7 +125,7 @@ KbdSizes.args = {};
 // IN TEXT KBD
 
 const InTextKbdTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -139,7 +139,7 @@ InTextKbd.args = {};
 // KEY COMBINATIONS
 
 const KeyCombinationsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -153,7 +153,7 @@ KeyCombinations.args = {};
 // FUNCTION KEYS
 
 const FunctionKeysTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -167,7 +167,7 @@ FunctionKeys.args = {};
 // FULL KEYBOARD
 
 const FullKeyboardTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };
@@ -181,7 +181,7 @@ FullKeyboard.args = {};
 // ARROW KEYS
 
 const ArrowKeysTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Kbd },
     setup() {
       return { args };

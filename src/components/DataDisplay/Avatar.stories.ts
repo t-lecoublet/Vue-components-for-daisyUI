@@ -38,7 +38,7 @@ const AvatarInCustomSizesTplStr = `
 // AVATAR
 
 const TemplateAvatar: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Avatar },
     setup() {
       return { args };
@@ -57,7 +57,7 @@ DefaultAvatar.args = {
 // CUSTOM SIZES AVATAR
 
 const AvatarInCustomSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Avatar },
     setup() {
       return { args };

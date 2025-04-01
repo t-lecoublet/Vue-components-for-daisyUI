@@ -34,7 +34,7 @@ const UserNameTextInputWithIconAndValidatorTplStr = `
 
 // USERNAME TEXT INPUT WITH ICON AND VALIDATOR
 const UserNameTextInputWithIconAndValidatorTemplate: StoryObj = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { LabelInputValidator, UserIcon },
     setup() {
       return { args };

@@ -64,7 +64,7 @@ const LoginFormTplStr = `
 // DEFAULT
 
 const DefaultLabelTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Fieldset, InputField },
     setup() {
       return { args };
@@ -78,7 +78,7 @@ export const DefaultLabel = { ...DefaultLabelTemplate };
 // FIELDSET WITH BACKGROUND AND BORDER
 
 const FieldsetWithBackgroundAndBorderTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Fieldset, InputField },
     setup() {
       return { args };
@@ -94,7 +94,7 @@ FieldsetWithBackgroundAndBorder.args = {};
 // FIELDSET WITH MULTIPLE INPUTS
 
 const FieldsetWithMultipleInputsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Fieldset, InputField, Label },
     setup() {
       return { args };
@@ -110,7 +110,7 @@ FieldsetWithMultipleInputs.args = {};
 // LOGIN FORM
 
 const LoginFormTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Fieldset, InputField, Button },
     setup() {
       return { args };

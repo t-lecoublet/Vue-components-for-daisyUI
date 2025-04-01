@@ -45,7 +45,7 @@ const defaultColorsTplStr = `
 // LOADING SPINNER
 
 const TemplateLoading: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Loading },
     setup() {
       return { args };
@@ -98,7 +98,7 @@ InfinityLoading.args = {
 // LOADING WITH COLORS
 
 const LoadingWithColorsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Loading },
     setup() {
       return { args };

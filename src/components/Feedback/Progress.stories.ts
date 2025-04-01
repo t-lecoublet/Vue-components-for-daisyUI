@@ -34,7 +34,7 @@ const indeterminateTplStr = `
 // PROGRESS
 
 const TemplateProgress: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Progress },
     setup() {
       return { args };
@@ -104,7 +104,7 @@ ErrorProgress.args = {
 // INDETERMINATE WITHOUT VALUE
 
 const IndeterminateTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Progress },
     setup() {
       return { args };

@@ -365,7 +365,7 @@ const cardDashTplStr = `
 // DEFAULT CARD
 
 const TemplateCard: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -379,7 +379,7 @@ export const DefaultCard = { ...TemplateCard };
 // CARD WITH SLOTS
 
 const CardWithSlotsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -393,7 +393,7 @@ export const CardWithSlots = { ...CardWithSlotsTemplate };
 // CARD WITH PROP TITLE
 
 const CardWithPropTitleTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -409,7 +409,7 @@ export const CardWithPropTitle = { ...CardWithPropTitleTemplate };
 // CARD WITH BODY SLOT
 
 const CardWithBodySlotTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -423,7 +423,7 @@ export const CardWithBodySlot = { ...CardWithBodySlotTemplate };
 // CARD WITH CONTENT SLOT
 
 const CardWithContentSlotTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -437,7 +437,7 @@ export const CardWithContentSlot = { ...CardWithContentSlotTemplate };
 // PRICING CARD
 
 const PricingCardTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button, Badge },
     setup() {
       return { args };
@@ -451,7 +451,7 @@ export const PricingCard = { ...PricingCardTemplate };
 // CARD WITHOUT IMAGE
 
 const CardWithoutImageTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -467,7 +467,7 @@ export const CardWithoutImage = { ...CardWithoutImageTemplate };
 // CARD WITH BADGE
 
 const CardWithBadgeTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button, Badge },
     setup() {
       return { args };
@@ -481,7 +481,7 @@ export const CardWithBadge = { ...CardWithBadgeTemplate };
 // CARD WITH BOTTOM IMAGE
 
 const CardBottomImageTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -495,7 +495,7 @@ export const CardBottomImage = { ...CardBottomImageTemplate };
 // CARD CENTERED
 
 const CardCenteredTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -509,7 +509,7 @@ export const CardCentered = { ...CardCenteredTemplate };
 // CARD SIDE
 
 const CardSideTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -525,7 +525,7 @@ export const CardSide = { ...CardSideTemplate };
 // CARD IMAGE FULL
 
 const CardImageFullTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -541,7 +541,7 @@ export const CardImageFull = { ...CardImageFullTemplate };
 // CARD CUSTOM COLOR
 
 const CardCustomColorTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -555,7 +555,7 @@ export const CardCustomColor = { ...CardCustomColorTemplate };
 // CARD NEUTRAL
 
 const CardNeutralTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -569,7 +569,7 @@ export const CardNeutral = { ...CardNeutralTemplate };
 // CARD ACTION TOP
 
 const CardActionTopTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -583,7 +583,7 @@ export const CardActionTop = { ...CardActionTopTemplate };
 // CARD RESPONSIVE
 
 const CardResponsiveTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -599,7 +599,7 @@ export const CardResponsive = { ...CardResponsiveTemplate };
 // CARD SIZES
 
 const CardSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -613,7 +613,7 @@ export const CardSizes = { ...CardSizesTemplate };
 // CARD BORDERED
 
 const CardBorderedTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };
@@ -629,7 +629,7 @@ export const CardBordered = { ...CardBorderedTemplate };
 // CARD DASH
 
 const CardDashTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Card, Button },
     setup() {
       return { args };

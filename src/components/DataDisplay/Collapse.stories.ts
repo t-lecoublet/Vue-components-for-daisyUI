@@ -64,7 +64,7 @@ export const WithPlusIcon: Story = {
 };
 
 export const WithCustomContent: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Collapse, Button },
     setup() {
       const items = [
@@ -110,7 +110,7 @@ export const WithCustomContent: Story = {
 };
 
 export const ManualMode: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Collapse, Button },
     setup() {
       return { args };

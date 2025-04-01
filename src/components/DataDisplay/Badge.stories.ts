@@ -99,7 +99,7 @@ const BadgeInAButtonTplStr = `
 // BADGE
 
 const TemplateBadge: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -115,7 +115,7 @@ DefaultBadge.args = {};
 // BADGE SIZES
 
 const BadgeSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -131,7 +131,7 @@ BadgeSizes.args = {};
 // BADGE COLORS
 
 const BadgeColorsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -175,7 +175,7 @@ BadgeGhost.args = {
 // EMPTY BADGE
 
 const EmptyBadgeTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -193,7 +193,7 @@ EmptyBadge.args = {
 // BADGE WITH ICON
 
 const BadgeWithIconTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -211,7 +211,7 @@ WithIconBadge.args = {
 // BADGE IN A TEXT
 
 const BadgeInATextTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };
@@ -227,7 +227,7 @@ BadgeInAText.args = {};
 // BADGE IN A BUTTON
 
 const BadgeInAButtonTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Badge },
     setup() {
       return { args };

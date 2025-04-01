@@ -91,7 +91,7 @@ const withTitleAndDescription = `
 // DEFAULT TEMPLATE
 
 const TemplateAlert: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Alert },
     setup() {
       return { args };
@@ -117,7 +117,7 @@ AutoDismissibleAlert.args = {
 // MULTIPLE BUTTONS
 
 const CombinedTemplateAlert: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Alert },
     setup() {
       return { args };
@@ -138,7 +138,7 @@ DashCombinedAlerts.args = { dash: true, icon: false };
 // WITH ACTIONS BUTTONS
 
 const WithActionsTemplateAlert: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Alert },
     setup() {
       return { args };
@@ -153,7 +153,7 @@ export const DefaultResponsiveWithActions = { ...WithActionsTemplateAlert };
 // WITH TITLE AND DESCRIPTION
 
 const WithTitleAndDescTemplateAlert: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Alert },
     setup() {
       return { args };

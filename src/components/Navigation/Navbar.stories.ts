@@ -70,7 +70,7 @@ const NavbarWithMenuAndSubmenuTplStr = `
 // NAVBAR WITH TITLE ONLY
 
 const NavbarWithTitleOnlyTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Navbar, ButtonLink },
     setup() {
       return { args };
@@ -83,7 +83,7 @@ export const NavbarWithTitleOnly = { ...NavbarWithTitleOnlyTemplate };
 // NAVBAR WITH TITLE AND ICON
 
 const NavbarWithTitleAndIconTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Navbar, ButtonLink, Button, EllipsisIcon },
     setup() {
       return { args };
@@ -96,7 +96,7 @@ export const NavbarWithTitleAndIcon = { ...NavbarWithTitleAndIconTemplate };
 // NAVBAR WITH ICON AT START AND END
 
 const NavbarWithIconAtStartAndEndTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Navbar, ButtonLink, Button, EllipsisIcon, MenuIcon },
     setup() {
       return { args };
@@ -111,7 +111,7 @@ export const NavbarWithIconAtStartAndEnd = {
 // NAVBAR WITH MENU AND SUBMENU
 
 const NavbarWithMenuAndSubmenuTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Navbar, ButtonLink },
     setup() {
       return { args };

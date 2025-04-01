@@ -117,7 +117,7 @@ export const WithColors: Story = {
 };
 
 export const WithCustomSlots: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Chat, Badge },
     setup() {
       const items = [
@@ -162,7 +162,7 @@ export const WithCustomSlots: Story = {
 };
 
 export const ManualMode: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Chat, ChatItem, Badge },
     setup() {
       return { args };

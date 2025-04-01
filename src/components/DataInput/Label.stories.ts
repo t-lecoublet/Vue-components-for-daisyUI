@@ -79,7 +79,7 @@ const FloatingLabelWithDifferentSizesTplStr = `
 // DEFAULT
 
 const DefaultLabelTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField },
     setup() {
       return { args };
@@ -92,7 +92,7 @@ export const DefaultLabel = { ...DefaultLabelTemplate };
 
 // LABEL FOR INPUT AT THE END
 const LabelForInputAtTheEndTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField },
     setup() {
       return { args };
@@ -104,7 +104,7 @@ export const LabelForInputAtTheEnd = { ...LabelForInputAtTheEndTemplate };
 
 // LABEL FOR SELECT
 const LabelForSelectTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField, Select },
     setup() {
       return { args };
@@ -116,7 +116,7 @@ export const LabelForSelect = { ...LabelForSelectTemplate };
 
 // LABEL FOR DATE INPUT
 const LabelForDateInputTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField },
     setup() {
       return { args };
@@ -128,7 +128,7 @@ export const LabelForDateInput = { ...LabelForDateInputTemplate };
 
 // FLOATING LABEL
 const FloatingLabelTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField },
     setup() {
       return { args };
@@ -141,7 +141,7 @@ export const FloatingLabel = { ...FloatingLabelTemplate };
 // FLOATING LABEL WITH DIFFERENT SIZES
 
 const FloatingLabelWithDifferentSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Label, InputField },
     setup() {
       return { args };

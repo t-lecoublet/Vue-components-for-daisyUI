@@ -48,7 +48,7 @@ const colorsLinkTplStr = `
 // DEFAULT LINK
 
 const TemplateLink: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Link },
     setup() {
       return { args };
@@ -62,7 +62,7 @@ DefaultLink.args = {};
 // LINK IN PARAGRAPH
 
 const LinkInParagraphTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Link },
     setup() {
       return { args };
@@ -76,7 +76,7 @@ LinkInParagraph.args = {};
 // COLOR LINKS
 
 const ColorsLinkTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Link },
     setup() {
       return { args };

@@ -204,7 +204,7 @@ const LoginButtonsTplStr = `
 // BUTTON
 
 const TemplateButton: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -220,7 +220,7 @@ DefaultButton.args = {};
 // BUTTON SIZES
 
 const ButtonSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -234,7 +234,7 @@ ButtonSizes.args = {};
 // BUTTON COLORS
 
 const ButtonColorsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -248,7 +248,7 @@ ButtonColors.args = {};
 // SOFT BUTTONS
 
 const ButtonWithControlsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -285,7 +285,7 @@ ActiveButtons.args = {
 // BUTTONS GHOST AND BUTTON LINK
 
 const ButtonGhostAndButtonLinkTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -305,7 +305,7 @@ WideButton.args = {
 // CIRCLE BUTTON AND SQUARE BUTTON
 
 const CircleButtonAndSquareButtonTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -320,7 +320,7 @@ export const CircleButtonAndSquareButton = {
 // BUTTON WITH ICON
 
 const ButtonWithIconTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -333,7 +333,7 @@ export const ButtonWithIcon = { ...ButtonWithIconTemplate };
 // BUTTON BLOCK
 
 const ButtonBlockTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -346,7 +346,7 @@ export const ButtonBlock = { ...ButtonBlockTemplate };
 // BUTTON WITH LOADING SPINNER
 
 const ButtonWithLoadingSpinnerTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };
@@ -359,7 +359,7 @@ export const ButtonWithLoadingSpinner = { ...ButtonWithLoadingSpinnerTemplate };
 // LOGIN BUTTONS
 
 const LoginButtonsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { ButtonLink },
     setup() {
       return { args };

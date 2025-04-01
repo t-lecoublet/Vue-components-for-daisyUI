@@ -346,7 +346,7 @@ const CollapsibleWithSubMenuResponsiveTplStr = `
 // DEFAULT MENU
 
 const DefaultMenuTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -367,7 +367,7 @@ ResponsiveMenu.args = {
 // MENU WITH ICON ONLY
 
 const MenuWithIconsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu, HomeIcon, DetailIcon, ChartIcon },
     setup() {
       return { args };
@@ -388,7 +388,7 @@ HorizontalMenuWithIcons.args = {
 // MENU WITH ICON AND TOOLTIP
 
 const MenuWithIconsAndTooltipsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu, HomeIcon, DetailIcon, ChartIcon, Tooltip },
     setup() {
       return { args };
@@ -402,7 +402,7 @@ MenuWithIconsAndTooltips.args = {};
 // MENU WITH ICON AND TOOLTIP HORIZONTAL
 
 const MenuWithIconsAndTooltipsHorizontalTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu, HomeIcon, DetailIcon, ChartIcon, Tooltip },
     setup() {
       return { args };
@@ -418,7 +418,7 @@ MenuWithIconsAndTooltipsHorizontal.args = {};
 // MENU SIZES
 
 const MenuSizesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -432,7 +432,7 @@ MenuSizes.args = {};
 // MENU WITH DISABLED ITEMS
 
 const MenuWithDisabledItemsTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -446,7 +446,7 @@ MenuWithDisabledItems.args = {};
 // MENU WITH ICONS AND TEXT
 
 const MenuWithIconsAndTextTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu, HomeIcon, DetailIcon, ChartIcon },
     setup() {
       return { args };
@@ -460,7 +460,7 @@ MenuWithIconsAndText.args = {};
 // MENU WITH ICONS AND BADGE RESPONSIVE
 
 const MenuWithIconsAndBadgeResponsiveTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu, HomeIcon, DetailIcon, ChartIcon, Badge },
     setup() {
       return { args };
@@ -485,7 +485,7 @@ MenuWithoutPaddingAndBorderRadius.args = {
 // MENU WITH TITLE
 
 const MenuWithTitleTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -499,7 +499,7 @@ MenuWithTitle.args = {};
 // MENU WITH TITLE AS A PARENT
 
 const MenuWithTitleAsParentTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -513,7 +513,7 @@ MenuWithTitleAsParent.args = {};
 // SUBMENU
 
 const SubMenuTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -527,7 +527,7 @@ SubMenu.args = {};
 // COLLAPSIBLE SUBMENU
 
 const CollapsibleSubMenuTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -541,7 +541,7 @@ CollapsibleSubMenu.args = {};
 // COLLAPSIBLE SUBMENU WITH CLASS NAMES
 
 const CollapsibleSubMenuWithClassNamesTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -557,7 +557,7 @@ CollapsibleSubMenuWithClassNames.args = {};
 // FILE TREE
 
 const FileTreeTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: {
       Menu,
       FileUserIcon,
@@ -577,7 +577,7 @@ FileTree.args = {};
 // MENU WITH ACTIVE ITEM
 
 const MenuWithActiveItemTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -598,7 +598,7 @@ MenuHorizontal.args = {
 // HORIZONTAL SUBMENU
 
 const HorizontalSubMenuTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -612,7 +612,7 @@ HorizontalSubMenu.args = {};
 // MEGA MEGAMENU WITH SUBMENU RESPONSIVE
 
 const MegaMenuWithSubMenuResponsiveTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };
@@ -628,7 +628,7 @@ MegaMenuWithSubMenuResponsive.args = {};
 // COLLAPSIBLE WITH SUBMENU RESPONSIVE
 
 const CollapsibleWithSubMenuResponsiveTemplate: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Menu },
     setup() {
       return { args };

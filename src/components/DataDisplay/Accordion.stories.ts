@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import Accordion from "./Accordion.vue";
+import Accordion from "@/components/DataDisplay/Accordion.vue";
 import Button from "@/components/Actions/Button.vue";
-import AccordionItem from "./AccordionItem.vue";
+import AccordionItem from "@/components/DataDisplay/AccordionItem.vue";
 
 const meta = {
   title: "Components/DataDisplay/Accordion",
@@ -93,7 +93,7 @@ export const WithCustomClass: Story = {
 };
 
 export const WithCustomSlots: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Accordion, Button },
     setup() {
       const items = [
@@ -132,7 +132,7 @@ export const WithCustomSlots: Story = {
 };
 
 export const WithGlobalSlots: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Accordion, Button },
     setup() {
       const items = [
@@ -176,7 +176,7 @@ export const WithGlobalSlots: Story = {
 };
 
 export const MultipleGroups: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Accordion },
     setup() {
       const firstGroup = [
@@ -220,7 +220,7 @@ export const MultipleGroups: Story = {
 };
 
 export const ManualMode: Story = {
-  render: (args) => ({
+  render: (args: any) => ({
     components: { Accordion, AccordionItem, Button },
     setup() {
       return { args };
