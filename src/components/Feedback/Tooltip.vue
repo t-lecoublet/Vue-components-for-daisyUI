@@ -4,7 +4,6 @@ import { type Variant, useVariantMapping } from "@/composables/useVariantProps";
 
 const slots = useSlots();
 
-// Définition des types pour les props
 const props = withDefaults(
   defineProps<{
     variant?: Variant;
@@ -15,7 +14,7 @@ const props = withDefaults(
   }>(),
   {
     variant: "default",
-    dataTip: "hello",
+    dataTip: undefined,
     open: false,
     position: "top",
     responsive: false,

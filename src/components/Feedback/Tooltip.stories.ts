@@ -32,8 +32,8 @@ const DefaultTplStr = `
 </div>`;
 const WithTooltipContentTplStr = `
 <div class="m-12">
-  <Tooltip v-bind="args" data-tip="Hello world">
-    <template v-slot:content>
+  <Tooltip v-bind="args">
+    <template #content>
       <div class="animate-bounce text-orange-400 -rotate-10 text-2xl font-black">Wow!</div>
     </template>
     <Button>Hover me</Button>
