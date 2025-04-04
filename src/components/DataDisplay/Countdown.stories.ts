@@ -63,13 +63,13 @@ export const WithDifferentFormats: Story = {
     setup() {
       // Set target date to 2 days, 3 hours, 45 minutes and 30 seconds from now
       const targetDate = new Date(
-        Date.now() + 
-        2 * 24 * 60 * 60 * 1000 + 
-        3 * 60 * 60 * 1000 + 
-        45 * 60 * 1000 + 
-        30 * 1000
+        Date.now() +
+          2 * 24 * 60 * 60 * 1000 +
+          3 * 60 * 60 * 1000 +
+          45 * 60 * 1000 +
+          30 * 1000,
       );
-      
+
       return { targetDate };
     },
     template: `
@@ -104,13 +104,13 @@ export const CountdownGroupExample: Story = {
     setup() {
       // Set target date to 2 days, 3 hours, 45 minutes and 30 seconds from now
       const targetDate = new Date(
-        Date.now() + 
-        2 * 24 * 60 * 60 * 1000 + 
-        3 * 60 * 60 * 1000 + 
-        45 * 60 * 1000 + 
-        30 * 1000
+        Date.now() +
+          2 * 24 * 60 * 60 * 1000 +
+          3 * 60 * 60 * 1000 +
+          45 * 60 * 1000 +
+          30 * 1000,
       );
-      
+
       return { targetDate };
     },
     template: `
@@ -141,25 +141,25 @@ export const WithControls: Story = {
     setup() {
       const countdownRef = ref<InstanceType<typeof Countdown> | null>(null);
       const value = ref(30);
-      
+
       const start = () => {
         if (countdownRef.value) {
           countdownRef.value.start();
         }
       };
-      
+
       const stop = () => {
         if (countdownRef.value) {
           countdownRef.value.stop();
         }
       };
-      
+
       const reset = () => {
         if (countdownRef.value) {
           countdownRef.value.reset();
         }
       };
-      
+
       return { countdownRef, value, start, stop, reset };
     },
     template: `
@@ -183,7 +183,7 @@ export const LargeStyled: Story = {
     components: { Countdown },
     setup() {
       const targetDate = new Date(Date.now() + 60 * 1000); // 60 seconds from now
-      
+
       return { targetDate };
     },
     template: `
@@ -227,14 +227,14 @@ export const WithEndEvent: Story = {
       const countdownRef = ref<InstanceType<typeof Countdown> | null>(null);
       const value = ref(5);
       const message = ref("");
-      
+
       const handleCountdownEnd = () => {
         message.value = "Countdown finished !";
         setTimeout(() => {
           message.value = "";
         }, 3000);
       };
-      
+
       const resetCountdown = () => {
         if (countdownRef.value) {
           value.value = 5;
@@ -243,8 +243,14 @@ export const WithEndEvent: Story = {
           message.value = "";
         }
       };
-      
-      return { countdownRef, value, message, handleCountdownEnd, resetCountdown };
+
+      return {
+        countdownRef,
+        value,
+        message,
+        handleCountdownEnd,
+        resetCountdown,
+      };
     },
     template: `
       <div class="flex flex-col gap-4">
@@ -266,4 +272,4 @@ export const WithEndEvent: Story = {
       </div>
     `,
   }),
-}; 
+};

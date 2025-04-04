@@ -59,6 +59,14 @@ const statusSizes = {
   lg: "status-lg",
   xl: "status-xl",
 };
+const tableSizes = {
+  default: "",
+  xs: "table-xs",
+  sm: "table-sm",
+  md: "table-md",
+  lg: "table-lg",
+  xl: "table-xl",
+};
 const textSizes = {};
 const avatarSizes = {
   default: "size-16",
@@ -80,11 +88,6 @@ const cardSizes = {
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);
-    return { sizeClass };
-  }
-
-  if (suffix === "card") {
-    const sizeClass = computed(() => cardSizes[props.size]);
     return { sizeClass };
   }
 

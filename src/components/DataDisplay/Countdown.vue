@@ -17,7 +17,7 @@ const props = withDefaults(
     separator: ":",
     customClass: "",
     autoStart: true,
-  }
+  },
 );
 
 const currentValue = ref(props.value !== undefined ? props.value : 0);
@@ -25,18 +25,19 @@ const intervalId = ref<number | null>(null);
 
 const calculateTimeRemaining = () => {
   if (!props.targetDate) return 0;
-  
+
   const now = new Date().getTime();
   const target = props.targetDate.getTime();
   const difference = Math.max(0, target - now);
-  
+
   const calculators = {
     days: () => Math.floor(difference / (1000 * 60 * 60 * 24)),
-    hours: () => Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+    hours: () =>
+      Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
     minutes: () => Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)),
-    seconds: () => Math.floor((difference % (1000 * 60)) / 1000)
+    seconds: () => Math.floor((difference % (1000 * 60)) / 1000),
   };
-  
+
   return (calculators[props.format] || calculators.seconds)();
 };
 
@@ -60,26 +61,26 @@ const ariaLabel = computed(() => {
 
 // Définir l'émetteur d'événements
 const emit = defineEmits<{
-  (e: 'end'): void
+  (e: "end"): void;
 }>();
 
 // Démarrer le compte à rebours
 const startCountdown = () => {
   if (intervalId.value !== null) return;
-  
+
   updateFromTargetDate();
-  
+
   intervalId.value = window.setInterval(() => {
     if (props.targetDate) {
       updateFromTargetDate();
       if (currentValue.value === 0) {
-        emit('end');
+        emit("end");
         stopCountdown();
       }
     } else if (currentValue.value > 0) {
       currentValue.value--;
       if (currentValue.value === 0) {
-        emit('end');
+        emit("end");
         stopCountdown();
       }
     } else {
@@ -116,18 +117,24 @@ defineExpose({
 });
 
 // Surveiller les changements de props
-watch(() => props.value, (newValue) => {
-  if (newValue !== undefined) {
-    currentValue.value = newValue;
-  }
-});
+watch(
+  () => props.value,
+  (newValue) => {
+    if (newValue !== undefined) {
+      currentValue.value = newValue;
+    }
+  },
+);
 
-watch(() => props.targetDate, () => {
-  resetCountdown();
-  if (props.autoStart) {
-    startCountdown();
-  }
-});
+watch(
+  () => props.targetDate,
+  () => {
+    resetCountdown();
+    if (props.autoStart) {
+      startCountdown();
+    }
+  },
+);
 
 // Démarrer le compte à rebours au montage si autoStart est true
 onMounted(() => {
@@ -143,13 +150,13 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <span 
-    :class="['countdown', customClass]" 
-    aria-live="polite" 
+  <span
+    :class="['countdown', customClass]"
+    aria-live="polite"
     :aria-label="ariaLabel"
   >
     <span :style="`--value: ${currentValue};`">
       <slot>{{ formattedValue }}</slot>
     </span>
   </span>
-</template> 
+</template>

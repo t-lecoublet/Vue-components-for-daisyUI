@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const props = defineProps<{
-    class?: string;
+  class?: string;
 }>();
 </script>
 
@@ -8,4 +8,4 @@ const props = defineProps<{
   <ul :class="['list', props.class]">
     <slot></slot>
   </ul>
-</template> 
+</template>

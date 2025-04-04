@@ -9,7 +9,7 @@ const props = withDefaults(
     item1: undefined,
     item2: undefined,
     aspectRatio: "",
-  }
+  },
 );
 </script>
 
@@ -18,15 +18,25 @@ const props = withDefaults(
     <div class="diff-item-1">
       <slot name="item1">
         <img v-if="item1" :src="item1" alt="Image 1" />
-        <div v-else class="bg-primary text-primary-content flex items-center justify-center h-full">Image 1</div>
+        <div
+          v-else
+          class="bg-primary text-primary-content flex items-center justify-center h-full"
+        >
+          Image 1
+        </div>
       </slot>
     </div>
     <div class="diff-item-2">
       <slot name="item2">
         <img v-if="item2" :src="item2" alt="Image 2" />
-        <div v-else class="bg-secondary text-secondary-content flex items-center justify-center h-full">Image 2</div>
+        <div
+          v-else
+          class="bg-secondary text-secondary-content flex items-center justify-center h-full"
+        >
+          Image 2
+        </div>
       </slot>
     </div>
     <div class="diff-resizer"></div>
   </figure>
-</template> 
+</template>

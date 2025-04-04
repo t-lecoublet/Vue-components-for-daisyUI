@@ -15,9 +15,17 @@ const meta = {
     },
     aspectRatio: {
       control: "select",
-      options: [null, "aspect-16/9", "aspect-4/3", "aspect-1/1", "aspect-video", "aspect-square"],
-      description: "Aspect ratio for the diff component (can be null for no aspect ratio)",
-    }
+      options: [
+        null,
+        "aspect-16/9",
+        "aspect-4/3",
+        "aspect-1/1",
+        "aspect-video",
+        "aspect-square",
+      ],
+      description:
+        "Aspect ratio for the diff component (can be null for no aspect ratio)",
+    },
   },
   args: {
     item1: "https://picsum.photos/id/1/200/200",
@@ -35,7 +43,7 @@ export const DifferentAspectRatios: Story = {
   render: (args: any) => ({
     components: { Diff },
     setup() {
-      return { };
+      return {};
     },
     template: `
       <div class="flex flex-col gap-8">
@@ -84,7 +92,7 @@ export const WithColorBackgrounds: Story = {
   render: (args: any) => ({
     components: { Diff },
     setup() {
-      return { };
+      return {};
     },
     template: `
       <Diff aspect-ratio="aspect-16/9">
@@ -113,7 +121,7 @@ export const WithCustomContent: Story = {
   render: (args: any) => ({
     components: { Diff },
     setup() {
-      return { };
+      return {};
     },
     template: `
       <Diff aspect-ratio="aspect-[4/3]">
@@ -146,4 +154,4 @@ export const WithCustomContent: Story = {
       </Diff>
     `,
   }),
-}; 
+};
