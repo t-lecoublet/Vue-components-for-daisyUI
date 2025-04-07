@@ -16,15 +16,12 @@ const props = withDefaults(
 </script>
 
 <template>
-  <th
-    v-if="isHeader"
+  <component
+    :is="isHeader ? 'th' : 'td'"
     :class="customClass"
     :colspan="colspan"
     :rowspan="rowspan"
   >
     <slot></slot>
-  </th>
-  <td v-else :class="customClass" :colspan="colspan" :rowspan="rowspan">
-    <slot></slot>
-  </td>
+  </component>
 </template>

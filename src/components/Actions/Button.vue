@@ -3,7 +3,6 @@ import { computed, inject } from "vue";
 import { type Variant, useVariantMapping } from "@/composables/useVariantProps";
 import { type Size, useSizeMapping } from "@/composables/useSizeProps";
 
-// Définition des types pour les props
 const props = withDefaults(
   defineProps<{
     size?: Size;
@@ -30,7 +29,7 @@ const props = withDefaults(
     ghost: false,
     link: false,
     wide: false,
-    disabled: false,
+    disabled: undefined,
     square: false,
     circle: false,
     block: false,
@@ -73,9 +72,11 @@ const blockClass = computed(() => {
 });
 </script>
 <template>
-  <button
-    v-if="!isInDropdownTrigger"
+  <component
+    :is="isInDropdownTrigger ? 'div' : 'button'"
     :disabled="disabled"
+    :tabindex="isInDropdownTrigger ? '0' : undefined"
+    :role="isInDropdownTrigger ? 'button' : undefined"
     :class="[
       'btn',
       sizeClass,
@@ -93,27 +94,5 @@ const blockClass = computed(() => {
     ]"
   >
     <slot></slot>
-  </button>
-  <div
-    v-else
-    tabindex="0"
-    role="button"
-    :class="[
-      'btn',
-      sizeClass,
-      colorClass,
-      softClass,
-      outlineClass,
-      dashClass,
-      activeClass,
-      ghostClass,
-      linkClass,
-      wideClass,
-      squareClass,
-      circleClass,
-      blockClass,
-    ]"
-  >
-    <slot></slot>
-  </div>
+  </component>
 </template>

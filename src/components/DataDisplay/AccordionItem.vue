@@ -23,7 +23,7 @@ const accordionName = inject("accordionName", "");
     <input
       type="radio"
       :name="accordionName"
-      :checked="checked ? 'checked' : undefined"
+      :checked="checked ? true : undefined"
     />
     <div class="collapse-title">
       <slot name="title">

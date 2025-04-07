@@ -50,3 +50,14 @@ For more commands, check official [npm documentation](https://docs.npmjs.com/cli
 ## License
 
 DWTFYWPL
+
+## Contributing
+
+Before any contribution, please read the [contributing guide](CONTRIBUTING.md).
+This project is a work in progress, and we welcome contributions from the community. If you have any ideas or suggestions, please feel free to open an issue or a pull request.
+We are always looking for ways to improve the project and make it more useful for everyone.
+
+## TODO
+
+- [ ] Fix InputField focus ring (Label - try using inject-provide system to disable ring ??) [see TextInputWithLabelInsideTplStr]
+- [ ] Add all daisyui components
