@@ -3,6 +3,8 @@ import { computed, inject } from "vue";
 import { type Variant, useVariantMapping } from "@/composables/useVariantProps";
 import { type Size, useSizeMapping } from "@/composables/useSizeProps";
 
+type ElementType = 'button' | 'a' | 'input' | 'div';
+
 const props = withDefaults(
   defineProps<{
     size?: Size;
@@ -18,6 +20,11 @@ const props = withDefaults(
     square?: boolean;
     circle?: boolean;
     block?: boolean;
+    as?: ElementType;
+    type?: string;
+    href?: string;
+    value?: string;
+    inputType?: 'button' | 'submit' | 'reset' | 'radio' | 'checkbox';
   }>(),
   {
     size: "default",
@@ -33,6 +40,11 @@ const props = withDefaults(
     square: false,
     circle: false,
     block: false,
+    as: 'button',
+    type: undefined,
+    href: undefined,
+    value: undefined,
+    inputType: undefined,
   },
 );
 
@@ -70,13 +82,41 @@ const circleClass = computed(() => {
 const blockClass = computed(() => {
   return props.block ? "btn-block" : "";
 });
+
+const elementTag = computed((): ElementType => {
+  if (isInDropdownTrigger) return 'div';
+  if (props.as) return props.as;
+  return 'button';
+});
+
+const isInputElement = computed(() => elementTag.value === 'input');
+const isAnchorElement = computed(() => elementTag.value === 'a');
+
+const buttonAttributes = computed(() => {
+  const attrs: Record<string, any> = {};
+
+  if (isInputElement.value) {
+    attrs.type = props.inputType || 'button';
+    attrs.value = props.value || '';
+  } else if (isAnchorElement.value) {
+    attrs.href = props.href || '#';
+    attrs.role = 'button';
+  } else if (isInDropdownTrigger) {
+    attrs.tabindex = '0';
+    attrs.role = 'button';
+  } else {
+    attrs.type = props.type || 'button';
+  }
+
+  attrs.disabled = props.disabled;
+
+  return attrs;
+});
 </script>
 <template>
   <component
-    :is="isInDropdownTrigger ? 'div' : 'button'"
-    :disabled="disabled"
-    :tabindex="isInDropdownTrigger ? '0' : undefined"
-    :role="isInDropdownTrigger ? 'button' : undefined"
+    :is="elementTag"
+    v-bind="buttonAttributes"
     :class="[
       'btn',
       sizeClass,
@@ -93,6 +133,6 @@ const blockClass = computed(() => {
       blockClass,
     ]"
   >
-    <slot></slot>
+    <slot v-if="!isInputElement"></slot>
   </component>
 </template>

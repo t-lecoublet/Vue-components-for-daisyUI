@@ -74,13 +74,12 @@ const ButtonGhostAndButtonLinkTplStr = `
 
 const ButtonWithAnyHtmlTagsTplStr = `
 <div class="flex gap-2 items-center">
-    <a role="button" class="btn" href="..">Link</a>
-    <Button type="submit" v-bind="args">Button</Button>
-    <input type="button" value="Input" class="btn" />
-    <input type="submit" value="Submit" class="btn" />
-    <input type="radio" aria-label="Radio" class="btn" />
-    <input type="checkbox" aria-label="Checkbox" class="btn" />
-    <input type="reset" value="Reset" class="btn" />
+    <Button>Button</Button>
+    <Button as="a" href="https://example.com">Link</Button>
+    <Button as="input" value="Input" />
+    <Button type="submit">Submit</Button>
+    <Button as="input" inputType="submit" value="Submit" />
+    <Button as="input" inputType="checkbox" aria-label="Checkbox" />
 </div>`;
 
 const DisabledButtonTplStr = `
