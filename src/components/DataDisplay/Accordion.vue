@@ -53,7 +53,7 @@ provide("accordionName", accordionName.value);
       <input
         type="radio"
         :name="accordionName"
-        :checked="item.checked ? 'checked' : undefined"
+        :checked="item.checked ? true : undefined"
       />
       <div class="collapse-title">
         <slot name="title" :item="item" :index="index">
