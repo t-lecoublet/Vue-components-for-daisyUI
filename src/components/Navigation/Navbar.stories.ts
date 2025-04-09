@@ -4,7 +4,7 @@ import ButtonLink from "@/components/Navigation/ButtonLink.vue";
 import Button from "@/components/Actions/Button.vue";
 import EllipsisIcon from "@/components/Icons/EllipsisIcon.vue";
 import MenuIcon from "@/components/Icons/MenuIcon.vue";
-import Avatar from '../DataDisplay/Avatar.vue'
+import Avatar from "@/components/DataDisplay/Avatar.vue";
 import Dropdown from "@/components/Actions/Dropdown.vue";
 import Menu from "@/components/Navigation/Menu.vue";
 
@@ -25,9 +25,9 @@ export const Default: Story = {
           <ButtonLink href="/" :ghost="true">daisyUI</ButtonLink>
         </template>
       </Navbar>
-    `
-  })
-}
+    `,
+  }),
+};
 
 export const WithTitleAndIcon: Story = {
   render: () => ({
@@ -43,9 +43,9 @@ export const WithTitleAndIcon: Story = {
           </Button>
         </template>
       </Navbar>
-    `
-  })
-}
+    `,
+  }),
+};
 
 export const WithIconAtStartAndEnd: Story = {
   render: () => ({
@@ -66,9 +66,9 @@ export const WithIconAtStartAndEnd: Story = {
           </Button>
         </template>
       </Navbar>
-    `
-  })
-}
+    `,
+  }),
+};
 
 export const WithMenuAndSubmenu: Story = {
   render: () => ({
@@ -93,9 +93,9 @@ export const WithMenuAndSubmenu: Story = {
           </ul>
         </template>
       </Navbar>
-    `
-  })
-}
+    `,
+  }),
+};
 
 export const WithSearchAndAvatar: Story = {
   render: () => ({
@@ -123,6 +123,6 @@ export const WithSearchAndAvatar: Story = {
             </Dropdown>
         </template>
       </Navbar>
-    `
-  })
-}
+    `,
+  }),
+};

@@ -3,7 +3,7 @@ import { computed, inject } from "vue";
 import { type Variant, useVariantMapping } from "@/composables/useVariantProps";
 import { type Size, useSizeMapping } from "@/composables/useSizeProps";
 
-type ElementType = 'button' | 'a' | 'input' | 'div';
+type ElementType = "button" | "a" | "input" | "div";
 
 const props = withDefaults(
   defineProps<{
@@ -24,7 +24,7 @@ const props = withDefaults(
     type?: string;
     href?: string;
     value?: string;
-    inputType?: 'button' | 'submit' | 'reset' | 'radio' | 'checkbox';
+    inputType?: "button" | "submit" | "reset" | "radio" | "checkbox";
   }>(),
   {
     size: "default",
@@ -40,7 +40,7 @@ const props = withDefaults(
     square: false,
     circle: false,
     block: false,
-    as: 'button',
+    as: "button",
     type: undefined,
     href: undefined,
     value: undefined,
@@ -84,28 +84,28 @@ const blockClass = computed(() => {
 });
 
 const elementTag = computed((): ElementType => {
-  if (isInDropdownTrigger) return 'div';
+  if (isInDropdownTrigger) return "div";
   if (props.as) return props.as;
-  return 'button';
+  return "button";
 });
 
-const isInputElement = computed(() => elementTag.value === 'input');
-const isAnchorElement = computed(() => elementTag.value === 'a');
+const isInputElement = computed(() => elementTag.value === "input");
+const isAnchorElement = computed(() => elementTag.value === "a");
 
 const buttonAttributes = computed(() => {
   const attrs: Record<string, any> = {};
 
   if (isInputElement.value) {
-    attrs.type = props.inputType || 'button';
-    attrs.value = props.value || '';
+    attrs.type = props.inputType || "button";
+    attrs.value = props.value || "";
   } else if (isAnchorElement.value) {
-    attrs.href = props.href || '#';
-    attrs.role = 'button';
+    attrs.href = props.href || "#";
+    attrs.role = "button";
   } else if (isInDropdownTrigger) {
-    attrs.tabindex = '0';
-    attrs.role = 'button';
+    attrs.tabindex = "0";
+    attrs.role = "button";
   } else {
-    attrs.type = props.type || 'button';
+    attrs.type = props.type || "button";
   }
 
   attrs.disabled = props.disabled;
