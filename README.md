@@ -61,4 +61,75 @@ We are always looking for ways to improve the project and make it more useful fo
 
 - [ ] Fix InputField focus ring (Label - try using inject-provide system to disable ring ??) [see TextInputWithLabelInsideTplStr]
 - [ ] Questionnable - Why ButtonLink exists ?
+
+## Roadmap
+
 - [ ] Add all daisyui components
+  - [ ] Add all Actions
+    - [x] Button
+    - [x] Dropdown
+    - [x] Modal
+    - [x] Swap
+    - [ ] ThemeController
+  - [ ] Add all DataDisplay
+    - [x] Accordion
+    - [x] Avatar
+    - [x] Badge
+    - [x] Card
+    - [ ] Carousel
+    - [x] ChatBubble
+    - [x] Collapse
+    - [x] Countdown
+    - [x] Diff
+    - [x] Kdb
+    - [x] List
+    - [ ] Stat
+    - [x] Status
+    - [x] Table
+    - [x] Timeline
+  - [ ] Add all Navigation
+    - [x] Breadcrumb
+    - [ ] Dock
+    - [x] Link
+    - [x] Menu
+    - [x] Navbar
+    - [x] Pagination
+    - [x] Steps
+    - [ ] Tabs
+  - [ ] Add all Feddback
+    - [x] Alert
+    - [x] Loading
+    - [x] Progress
+    - [ ] RadialProgress
+    - [ ] Skeleton
+    - [ ] Toats
+    - [x] Tooltip
+  - [ ] Add all DataInput
+    - [ ] Calendar
+    - [ ] Checkbox
+    - [x] Fieldset
+    - [ ] FileInput
+    - [ ] Filter
+    - [x] Label
+    - [ ] Radio
+    - [ ] Range
+    - [ ] Rating
+    - [x] Select
+    - [x] InputField
+    - [ ] Textarea
+    - [ ] Toggle
+    - [ ] Validator
+  - [ ] Add all Layout
+    - [ ] Divider
+    - [ ] Drawer
+    - [ ] Footer
+    - [ ] Hero
+    - [ ] Indicator
+    - [x] Join
+    - [ ] Mask
+    - [ ] Stack
+  - [ ] Ad all Mockup
+    - [ ] Browser
+    - [ ] Code
+    - [ ] Phone
+    - [ ] Window

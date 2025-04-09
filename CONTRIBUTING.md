@@ -13,6 +13,7 @@ Please help keep this project open and inclusive. By participating, you agree to
 ### Reporting Bugs
 
 If you find a bug, please create an issue with the following information:
+
 - A clear descriptive title
 - Steps to reproduce the bug
 - Expected behavior
@@ -23,6 +24,7 @@ If you find a bug, please create an issue with the following information:
 ### Suggesting Features
 
 We welcome feature suggestions! Please create an issue with:
+
 - A clear descriptive title
 - Detailed description of the feature
 - Why this feature would be beneficial
