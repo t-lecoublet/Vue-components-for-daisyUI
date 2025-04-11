@@ -76,7 +76,7 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Avatar
     - [x] Badge
     - [x] Card
-    - [ ] Carousel
+    - [x] Carousel
     - [x] ChatBubble
     - [x] Collapse
     - [x] Countdown
