@@ -71,7 +71,7 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Modal
     - [x] Swap
     - [ ] ThemeController
-  - [ ] Add all DataDisplay
+  - [x] Add all DataDisplay
     - [x] Accordion
     - [x] Avatar
     - [x] Badge
@@ -83,7 +83,7 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Diff
     - [x] Kdb
     - [x] List
-    - [ ] Stat
+    - [x] Stat
     - [x] Status
     - [x] Table
     - [x] Timeline
