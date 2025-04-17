@@ -1,9 +1,9 @@
 <script setup lang="ts">
 defineProps<{
-  figureClass?: string
-  valueClass?: string
-  descClass?: string
-}>()
+  figureClass?: string;
+  valueClass?: string;
+  descClass?: string;
+}>();
 </script>
 
 <template>
@@ -25,4 +25,3 @@ defineProps<{
     </div>
   </div>
 </template>
-
