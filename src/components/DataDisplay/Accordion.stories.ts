@@ -6,6 +6,7 @@ import AccordionItem from "@/components/DataDisplay/AccordionItem.vue";
 const meta = {
   title: "Components/DataDisplay/Accordion",
   component: Accordion,
+  tags: ["autodocs"],
   argTypes: {
     items: {
       control: "object",
@@ -92,6 +93,25 @@ export const WithCustomClass: Story = {
   },
 };
 
+const WithCustomSlotsTemplate = `
+<div class="flex flex-col gap-2">
+  <Accordion :items="items" name="custom-slots" modifier="collapse-arrow">
+    <template #title-0="{ item }">
+      <div class="flex items-center gap-2">
+        <span class="badge badge-primary">Custom</span>
+        <span>{{ item.title }}</span>
+      </div>
+    </template>
+    <template #content-0="{ item }">
+      <div class="flex flex-col gap-2">
+        <p>{{ item.content }}</p>
+        <Button variant="primary" size="sm">Custom action</Button>
+      </div>
+    </template>
+  </Accordion>
+</div>
+`;
+
 export const WithCustomSlots: Story = {
   render: (args: any) => ({
     components: { Accordion, Button },
@@ -110,26 +130,37 @@ export const WithCustomSlots: Story = {
 
       return { items };
     },
-    template: `
-      <div class="flex flex-col gap-2">
-        <Accordion :items="items" name="custom-slots" modifier="collapse-arrow">
-          <template #title-0="{ item }">
-            <div class="flex items-center gap-2">
-              <span class="badge badge-primary">Custom</span>
-              <span>{{ item.title }}</span>
-            </div>
-          </template>
-          <template #content-0="{ item }">
-            <div class="flex flex-col gap-2">
-              <p>{{ item.content }}</p>
-              <Button variant="primary" size="sm">Custom action</Button>
-            </div>
-          </template>
-        </Accordion>
-      </div>
-    `,
+    template: WithCustomSlotsTemplate,
   }),
+  parameters: {
+    docs: {
+      source: {
+        code: WithCustomSlotsTemplate,
+        language: "html",
+      },
+    },
+  },
 };
+
+const WithGlobalSlotsTemplate = `
+<div class="flex flex-col gap-2">
+  <Accordion :items="items" name="global-slots" modifier="collapse-arrow">
+    <template #title="{ item, index }">
+      <div class="flex items-center gap-2">
+        <span class="badge badge-primary">{{ index + 1 }}</span>
+        <span>{{ item.title }}</span>
+      </div>
+    </template>
+    <template #content="{ item, index }">
+      <div class="flex flex-col gap-2">
+        <p>{{ item.content }}</p>
+        <p class="text-sm text-gray-500">Item number {{ index + 1 }}</p>
+        <Button variant="primary" size="sm">Action</Button>
+      </div>
+    </template>
+  </Accordion>
+</div>
+`;
 
 export const WithGlobalSlots: Story = {
   render: (args: any) => ({
@@ -153,27 +184,29 @@ export const WithGlobalSlots: Story = {
 
       return { items };
     },
-    template: `
-      <div class="flex flex-col gap-2">
-        <Accordion :items="items" name="global-slots" modifier="collapse-arrow">
-          <template #title="{ item, index }">
-            <div class="flex items-center gap-2">
-              <span class="badge badge-primary">{{ index + 1 }}</span>
-              <span>{{ item.title }}</span>
-            </div>
-          </template>
-          <template #content="{ item, index }">
-            <div class="flex flex-col gap-2">
-              <p>{{ item.content }}</p>
-              <p class="text-sm text-gray-500">Item number {{ index + 1 }}</p>
-              <Button variant="primary" size="sm">Action</Button>
-            </div>
-          </template>
-        </Accordion>
-      </div>
-    `,
+    template: WithGlobalSlotsTemplate,
   }),
+  parameters: {
+    docs: {
+      source: {
+        code: WithGlobalSlotsTemplate,
+        language: "html",
+      },
+    },
+  },
 };
+
+const MultipleGroupsTemplate = `
+<div class="flex flex-col gap-2">
+  <h3 class="mb-4">First accordion group</h3>
+  <div class="join join-vertical">
+    <Accordion :items="firstGroup" name="group1" modifier="collapse-arrow" customClass="join-item" />
+  </div>
+
+  <h3 class="mt-8 mb-4">Second accordion group</h3>
+  <Accordion :items="secondGroup" name="group2" modifier="collapse-plus" />
+</div>
+`;
 
 export const MultipleGroups: Story = {
   render: (args: any) => ({
@@ -205,19 +238,56 @@ export const MultipleGroups: Story = {
 
       return { firstGroup, secondGroup };
     },
-    template: `
-      <div class="flex flex-col gap-2" >
-        <h3 class="mb-4">First accordion group</h3>
-        <div class="join join-vertical" >
-            <Accordion :items="firstGroup" name="group1" modifier="collapse-arrow" customClass="join-item" />
-        </div>
-
-        <h3 class="mt-8 mb-4">Second accordion group</h3>
-        <Accordion :items="secondGroup" name="group2" modifier="collapse-plus" />
-      </div>
-    `,
+    template: MultipleGroupsTemplate,
   }),
+  parameters: {
+    docs: {
+      source: {
+        code: MultipleGroupsTemplate,
+        language: "html",
+      },
+    },
+  },
 };
+
+const ManualModeTemplate = `
+<div class="flex flex-col gap-2">
+  <Accordion name="manual-accordion">
+    <AccordionItem :checked="true" customClass="border-primary collapse-arrow">
+      <template #title>
+        <div class="flex items-center gap-2">
+          <span class="badge badge-primary">1</span>
+          <span>First manual item</span>
+        </div>
+      </template>
+      <div class="flex flex-col gap-2">
+        <p>This is the content of the first manually created accordion item.</p>
+        <Button variant="primary" size="sm">Action</Button>
+      </div>
+    </AccordionItem>
+    
+    <AccordionItem customClass="border-secondary collapse-plus">
+      <template #title>
+        <div class="flex items-center gap-2">
+          <span class="badge badge-secondary">2</span>
+          <span>Second manual item</span>
+        </div>
+      </template>
+      <p>This is the content of the second manually created accordion item.</p>
+    </AccordionItem>
+    
+    <AccordionItem>
+      <template #title>
+        <div class="flex items-center gap-2">
+          <span class="badge badge-accent">3</span>
+          <span>Third manual item</span>
+        </div>
+      </template>
+      <p>This is the content of the third manually created accordion item.</p>
+    </AccordionItem>
+  </Accordion>
+</div>
+`;
 
 export const ManualMode: Story = {
   render: (args: any) => ({
@@ -225,43 +295,14 @@ export const ManualMode: Story = {
     setup() {
       return { args };
     },
-    template: `
-      <div class="flex flex-col gap-2">
-        <Accordion name="manual-accordion" modifier="collapse-arrow">
-          <AccordionItem :checked="true" customClass="border-primary">
-            <template #title>
-              <div class="flex items-center gap-2">
-                <span class="badge badge-primary">1</span>
-                <span>First manual item</span>
-              </div>
-            </template>
-            <div class="flex flex-col gap-2">
-              <p>This is the content of the first manually created accordion item.</p>
-              <Button variant="primary" size="sm">Action</Button>
-            </div>
-          </AccordionItem>
-          
-          <AccordionItem customClass="border-secondary">
-            <template #title>
-              <div class="flex items-center gap-2">
-                <span class="badge badge-secondary">2</span>
-                <span>Second manual item</span>
-              </div>
-            </template>
-            <p>This is the content of the second manually created accordion item.</p>
-          </AccordionItem>
-          
-          <AccordionItem>
-            <template #title>
-              <div class="flex items-center gap-2">
-                <span class="badge badge-accent">3</span>
-                <span>Third manual item</span>
-              </div>
-            </template>
-            <p>This is the content of the third manually created accordion item.</p>
-          </AccordionItem>
-        </Accordion>
-      </div>
-    `,
+    template: ManualModeTemplate,
   }),
+  parameters: {
+    docs: {
+      source: {
+        code: ManualModeTemplate,
+        language: "html",
+      },
+    },
+  },
 };
