@@ -94,6 +94,15 @@ const dockSizes = {
   xl: "dock-xl",
 };
 
+const tabsSizes = {
+  default: "",
+  xs: "tabs-xs",
+  sm: "tabs-sm",
+  md: "tabs-md",
+  lg: "tabs-lg",
+  xl: "tabs-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);

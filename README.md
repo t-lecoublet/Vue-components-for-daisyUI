@@ -89,13 +89,13 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Timeline
   - [ ] Add all Navigation
     - [x] Breadcrumb
-    - [ ] Dock
+    - [x] Dock
     - [x] Link
     - [x] Menu
     - [x] Navbar
     - [x] Pagination
     - [x] Steps
-    - [ ] Tabs
+    - [x] Tabs
   - [ ] Add all Feddback
     - [x] Alert
     - [x] Loading
