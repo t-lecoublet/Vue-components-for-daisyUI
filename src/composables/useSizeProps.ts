@@ -2,6 +2,7 @@ import { computed } from "vue";
 import type { ArgTypes } from "@storybook/vue3";
 
 export type Size = "default" | "xs" | "sm" | "md" | "lg" | "xl";
+export const AvailableSizes: Size[] = ["default", "xs", "sm", "md", "lg", "xl"];
 
 const buttonSizes = {
   default: "",
