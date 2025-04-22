@@ -96,13 +96,13 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Pagination
     - [x] Steps
     - [x] Tabs
-  - [ ] Add all Feddback
+  - [x] Add all Feddback
     - [x] Alert
     - [x] Loading
     - [x] Progress
     - [x] RadialProgress
-    - [ ] Skeleton
-    - [ ] Toats
+    - [x] Skeleton
+    - [x] Toats
     - [x] Tooltip
   - [ ] Add all DataInput
     - [ ] Calendar
