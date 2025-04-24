@@ -147,6 +147,18 @@ const checkboxVariants = {
   error: "checkbox-error",
 };
 
+const fileInputVariants = {
+  default: "",
+  primary: "file-input-primary",
+  secondary: "file-input-secondary",
+  accent: "file-input-accent",
+  neutral: "file-input-neutral",
+  info: "file-input-info",
+  success: "file-input-success",
+  warning: "file-input-warning",
+  error: "file-input-error",
+};
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;

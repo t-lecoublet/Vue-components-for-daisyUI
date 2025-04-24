@@ -113,6 +113,15 @@ const checkboxSizes = {
   xl: "checkbox-xl",
 };
 
+const fileInputSizes = {
+  default: "",
+  xs: "file-input-xs",
+  sm: "file-input-sm",
+  md: "file-input-md",
+  lg: "file-input-lg",
+  xl: "file-input-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);
