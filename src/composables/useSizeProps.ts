@@ -131,6 +131,15 @@ const radioSizes = {
   xl: "radio-xl",
 };
 
+const rangeSizes = {
+  default: "",
+  xs: "range-xs",
+  sm: "range-sm",
+  md: "range-md",
+  lg: "range-lg",
+  xl: "range-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);

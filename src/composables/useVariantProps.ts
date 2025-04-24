@@ -171,6 +171,18 @@ const radioVariants = {
   error: "radio-error",
 };
 
+const rangeVariants = {
+  default: "",
+  primary: "range-primary",
+  secondary: "range-secondary",
+  accent: "range-accent",
+  neutral: "range-neutral",
+  info: "range-info",
+  success: "range-success",
+  warning: "range-warning",
+  error: "range-error",
+};
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;
