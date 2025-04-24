@@ -159,6 +159,18 @@ const fileInputVariants = {
   error: "file-input-error",
 };
 
+const radioVariants = {
+  default: "",
+  primary: "radio-primary",
+  secondary: "radio-secondary",
+  accent: "radio-accent",
+  neutral: "radio-neutral",
+  info: "radio-info",
+  success: "radio-success",
+  warning: "radio-warning",
+  error: "radio-error",
+};
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;

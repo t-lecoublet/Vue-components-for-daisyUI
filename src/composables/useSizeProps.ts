@@ -122,6 +122,15 @@ const fileInputSizes = {
   xl: "file-input-xl",
 };
 
+const radioSizes = {
+  default: "",
+  xs: "radio-xs",
+  sm: "radio-sm",
+  md: "radio-md",
+  lg: "radio-lg",
+  xl: "radio-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);
