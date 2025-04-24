@@ -104,6 +104,15 @@ const tabsSizes = {
   xl: "tabs-xl",
 };
 
+const checkboxSizes = {
+  default: "",
+  xs: "checkbox-xs",
+  sm: "checkbox-sm",
+  md: "checkbox-md",
+  lg: "checkbox-lg",
+  xl: "checkbox-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);

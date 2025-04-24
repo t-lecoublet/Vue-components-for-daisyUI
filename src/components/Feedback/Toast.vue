@@ -43,7 +43,7 @@ const verticalClass = computed(() => {
 
 <template>
   <template v-if="to">
-    <Teleport :to="to">
+    <Teleport defer :to="to">
       <div :class="['toast', horizontalClass, verticalClass]">
         <slot></slot>
       </div>

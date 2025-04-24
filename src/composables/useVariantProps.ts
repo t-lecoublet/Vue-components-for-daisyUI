@@ -135,6 +135,18 @@ const chatBubbleVariants = {
   error: "chat-bubble-error",
 };
 
+const checkboxVariants = {
+  default: "",
+  primary: "checkbox-primary",
+  secondary: "checkbox-secondary",
+  accent: "checkbox-accent",
+  neutral: "checkbox-neutral",
+  info: "checkbox-info",
+  success: "checkbox-success",
+  warning: "checkbox-warning",
+  error: "checkbox-error",
+};
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;
