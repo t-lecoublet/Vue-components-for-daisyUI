@@ -7,6 +7,7 @@ type ElementType = "button" | "a" | "input" | "div";
 
 const props = withDefaults(
   defineProps<{
+    customClass?: string;
     size?: Size;
     variant?: Variant;
     outline?: boolean;
@@ -25,8 +26,10 @@ const props = withDefaults(
     href?: string;
     value?: string;
     inputType?: "button" | "submit" | "reset" | "radio" | "checkbox";
+    label?: string;
   }>(),
   {
+    customClass: undefined,
     size: "default",
     variant: "default",
     outline: false,
@@ -45,10 +48,12 @@ const props = withDefaults(
     href: undefined,
     value: undefined,
     inputType: undefined,
+    label: undefined,
   },
 );
 
 const isInDropdownTrigger = inject("isDropdownTrigger", false);
+const filterName = inject("filterName", undefined);
 
 const { sizeClass } = useSizeMapping(props, "btn");
 const { colorClass } = useVariantMapping(props, "btn");
@@ -85,6 +90,7 @@ const blockClass = computed(() => {
 
 const elementTag = computed((): ElementType => {
   if (isInDropdownTrigger) return "div";
+  if (filterName) return "input";
   if (props.as) return props.as;
   return "button";
 });
@@ -95,7 +101,10 @@ const isAnchorElement = computed(() => elementTag.value === "a");
 const buttonAttributes = computed(() => {
   const attrs: Record<string, any> = {};
 
-  if (isInputElement.value) {
+  if (filterName.value) {
+    attrs.name = filterName.value;
+    attrs.type = "radio";
+  } else if (isInputElement.value) {
     attrs.type = props.inputType || "button";
     attrs.value = props.value || "";
   } else if (isAnchorElement.value) {
@@ -119,6 +128,7 @@ const buttonAttributes = computed(() => {
     v-bind="buttonAttributes"
     :class="[
       'btn',
+      customClass,
       sizeClass,
       colorClass,
       softClass,
@@ -132,6 +142,7 @@ const buttonAttributes = computed(() => {
       circleClass,
       blockClass,
     ]"
+    :aria-label="props.label"
   >
     <slot v-if="!isInputElement"></slot>
   </component>

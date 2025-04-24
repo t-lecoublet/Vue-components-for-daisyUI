@@ -106,10 +106,10 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Tooltip
   - [ ] Add all DataInput
     - [ ] Calendar
-    - [ ] Checkbox
+    - [x] Checkbox
     - [x] Fieldset
-    - [ ] FileInput
-    - [ ] Filter
+    - [x] FileInput
+    - [x] Filter
     - [x] Label
     - [ ] Radio
     - [ ] Range
