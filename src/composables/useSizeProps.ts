@@ -140,6 +140,15 @@ const rangeSizes = {
   xl: "range-xl",
 };
 
+const textAreaSizes = {
+  default: "",
+  xs: "textarea-xs",
+  sm: "textarea-sm",
+  md: "textarea-md",
+  lg: "textarea-lg",
+  xl: "textarea-xl",
+};
+
 export function useSizeMapping(props: { size: Size }, suffix: string) {
   if (suffix === "avatar") {
     const sizeClass = computed(() => avatarSizes[props.size]);

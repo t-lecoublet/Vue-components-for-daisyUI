@@ -183,6 +183,18 @@ const rangeVariants = {
   error: "range-error",
 };
 
+const TextAreaVariants = {
+  default: "",
+  primary: "textarea-primary",
+  secondary: "textarea-secondary",
+  accent: "textarea-accent",
+  neutral: "textarea-neutral",
+  info: "textarea-info",
+  success: "textarea-success",
+  warning: "textarea-warning",
+  error: "textarea-error",
+}
+
 export function useVariantMapping(props: { variant: Variant }, suffix: string) {
   const colorClass = computed(() => {
     return suffix + "-" + props.variant;

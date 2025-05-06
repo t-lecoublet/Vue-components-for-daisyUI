@@ -116,7 +116,7 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] Rating
     - [x] Select
     - [x] InputField
-    - [ ] Textarea
+    - [x] Textarea
     - [ ] Toggle
     - [ ] Validator
   - [ ] Add all Layout
