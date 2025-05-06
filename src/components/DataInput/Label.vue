@@ -1,5 +1,6 @@
 <script lang="ts">
 import type { Size } from "@/composables/useSizeProps";
+import { provide } from "vue";
 
 export type LabelProps = {
   type?: "input" | "select" | "floating-label" | "fieldset-label";
@@ -12,6 +13,10 @@ export type LabelProps = {
 const props = withDefaults(defineProps<LabelProps>(), {
   type: "input",
 });
+
+if (props.type === "input") {
+  provide("isInInput", true);
+}
 </script>
 
 <template>

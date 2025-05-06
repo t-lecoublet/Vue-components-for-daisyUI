@@ -2,7 +2,7 @@
 // Définition des types pour les props
 import { useSizeMapping } from "@/composables/useSizeProps";
 import { useVariantMapping } from "@/composables/useVariantProps";
-import { computed } from "vue";
+import { computed, inject } from "vue";
 import { InputFieldProps } from "@/components/DataInput/InputField.d";
 
 const props = withDefaults(defineProps<InputFieldProps>(), {
@@ -17,6 +17,8 @@ const props = withDefaults(defineProps<InputFieldProps>(), {
 const { colorClass } = useVariantMapping(props, "input");
 const { sizeClass } = useSizeMapping(props, "input");
 const ghostClass = computed(() => (props.ghost ? "input-ghost" : ""));
+
+const isInput = inject("isInInput", false);
 </script>
 
 <template>
@@ -24,7 +26,7 @@ const ghostClass = computed(() => (props.ghost ? "input-ghost" : ""));
     :disabled="disabled"
     :type="type"
     :placeholder="placeholder"
-    :class="['input', colorClass, sizeClass, ghostClass]"
+    :class="[!isInput && 'input', colorClass, sizeClass, ghostClass]"
     :list="suggestionName"
     :required="required"
     :pattern="pattern"

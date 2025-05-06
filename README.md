@@ -59,7 +59,7 @@ We are always looking for ways to improve the project and make it more useful fo
 
 ## TODO
 
-- [ ] Fix InputField focus ring (Label - try using inject-provide system to disable ring ??) [see TextInputWithLabelInsideTplStr]
+- [x] Fix InputField focus ring (Label - try using inject-provide system to disable ring ??) [see TextInputWithLabelInsideTplStr]
 - [ ] Questionnable - Why ButtonLink exists ?
 
 ## Roadmap
@@ -111,9 +111,9 @@ We are always looking for ways to improve the project and make it more useful fo
     - [x] FileInput
     - [x] Filter
     - [x] Label
-    - [ ] Radio
-    - [ ] Range
-    - [ ] Rating
+    - [x] Radio
+    - [x] Range
+    - [x] Rating
     - [x] Select
     - [x] InputField
     - [ ] Textarea
