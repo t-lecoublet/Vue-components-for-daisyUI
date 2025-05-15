@@ -5,7 +5,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps";
 import { DU_LOADING_ANIMATIONS } from "./du-loading.types";
 
 const meta: Meta<typeof DuLoading> = {
-  title: "Components/Feedback/DuLoading",
+  title: "Components/Feedback/Loading",
   component: DuLoading,
   tags: ['autodocs'],
   argTypes: {

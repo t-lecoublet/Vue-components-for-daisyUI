@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import DuSkeleton from "./du-skeleton.vue";
 
 const meta: Meta<typeof DuSkeleton> = {
-  title: "Components/Feedback/DuSkeleton",
+  title: "Components/Feedback/Skeleton",
   component: DuSkeleton,
 };
 

@@ -5,7 +5,7 @@ import DuButton from "../../Actions/du-button/du-button.vue";
 import { DU_TOOLTIP_POSITIONS } from "./du-tooltip.types";
 
 const meta: Meta<typeof DuTooltip> = {
-  title: "Components/Feedback/DuTooltip",
+  title: "Components/Feedback/Tooltip",
   component: DuTooltip,
   tags: ['autodocs'],
   argTypes: {

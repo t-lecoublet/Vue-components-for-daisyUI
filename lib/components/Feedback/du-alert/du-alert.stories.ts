@@ -3,7 +3,7 @@ import DuAlert from "./du-alert.vue";
 import { DU_ALERT_VARIANTS, DU_ALERT_DIRECTIONS } from "./du-alert.types";
 
 const meta: Meta<typeof DuAlert> = {
-  title: "Components/Feedback/DuAlert",
+  title: "Components/Feedback/Alert",
   component: DuAlert,
   tags: ['autodocs'],
   argTypes: {

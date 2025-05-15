@@ -3,7 +3,7 @@ import DuProgress from "./du-progress.vue";
 import { useVariantStoriesControl } from "../../../composables/useVariantProps";
 
 const meta: Meta<typeof DuProgress> = {
-  title: "Components/Feedback/DuProgress",
+  title: "Components/Feedback/Progress",
   component: DuProgress,
   tags: ['autodocs'],
   argTypes: {

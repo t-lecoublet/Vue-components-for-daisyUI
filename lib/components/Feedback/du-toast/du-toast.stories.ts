@@ -6,7 +6,7 @@ import { ref } from "vue";
 import { DU_TOAST_HORIZONTAL_POSITIONS, DU_TOAST_VERTICAL_POSITIONS } from "./du-toast.types";
 
 const meta: Meta<typeof DuToast> = {
-  title: "Components/Feedback/DuToast",
+  title: "Components/Feedback/Toast",
   component: DuToast,
   tags: ['autodocs'],
   argTypes: {

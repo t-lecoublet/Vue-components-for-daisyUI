@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 import DuNavbar from "./du-navbar.vue";
 import DuButtonLink from "../du-button-link/du-button-link.vue";
 import DuButton from "../../Actions/du-button/du-button.vue";
-import DuMenu from "../du-menu/du-menu.vue";
 
 const meta: Meta<typeof DuNavbar> = {
   title: "Components/Navigation/Navbar",
+  tags: ['autodocs'],
   component: DuNavbar,
 };
 

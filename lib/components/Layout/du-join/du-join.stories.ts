@@ -4,7 +4,7 @@ import DuButton from "../../Actions/du-button/du-button.vue";
 import { DU_JOIN_DIRECTIONS } from "./du-join.types";
 
 const meta: Meta<typeof DuJoin> = {
-  title: "Components/Layout/DuJoin",
+  title: "Components/Layout/Join",
   component: DuJoin,
   tags: ['autodocs'],
   argTypes: {
