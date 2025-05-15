@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { type Variant, useVariantMapping } from '@lib/composables/useVariantProps'
-import { type Size, useSizeMapping } from '@lib/composables/useSizeProps'
+import { type Variant, useVariantMapping } from '../../../composables/useVariantProps'
+import { type Size, useSizeMapping } from '../../../composables/useSizeProps'
 import { type BADGESize, type BADGEVariant } from './du-badge.types'
 
 // Définition des types pour les props

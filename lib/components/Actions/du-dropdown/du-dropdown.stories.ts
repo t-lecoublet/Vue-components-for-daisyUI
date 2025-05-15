@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import DuDropdown from './du-dropdown.vue'
 import DuButton from '../du-button/du-button.vue'
-import Menu from '@lib/components/Navigation/Menu.vue'
+import Menu from '../../../components/Navigation/du-menu/du-menu.vue'
 
 const meta: Meta<typeof DuDropdown> = {
   title: 'Components/Actions/Dropdown',

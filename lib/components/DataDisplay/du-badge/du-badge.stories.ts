@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import DuBadge from './du-badge.vue'
-import { useSizeStoriesControl } from '@lib/composables/useSizeProps'
-import { useVariantStoriesControl } from '@lib/composables/useVariantProps'
+import { useSizeStoriesControl } from '../../../composables/useSizeProps'
+import { useVariantStoriesControl } from '../../../composables/useVariantProps'
 
 const meta: Meta<typeof DuBadge> = {
   title: 'Components/DataDisplay/Badge',

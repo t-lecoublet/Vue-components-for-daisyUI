@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { type Size, useSizeMapping } from '@lib/composables/useSizeProps'
+import { type Size, useSizeMapping } from '../../../composables/useSizeProps'
 import { computed } from 'vue'
 import { type AVATARRounded } from './du-avatar.types'
 

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
 import DuCard from './du-card.vue'
-import DuButton from '@lib/components/Actions/du-button/du-button.vue'
-import DuBadge from '@lib/components/DataDisplay/du-badge/du-badge.vue'
-import { useSizeStoriesControl } from '@lib/composables/useSizeProps'
+import DuButton from '../../../components/Actions/du-button/du-button.vue'
+import DuBadge from '../../../components/DataDisplay/du-badge/du-badge.vue'
+import { useSizeStoriesControl } from '../../../composables/useSizeProps'
 
 const meta: Meta<typeof DuCard> = {
   title: 'Components/DataDisplay/Card',
