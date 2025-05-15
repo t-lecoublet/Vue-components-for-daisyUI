@@ -18,6 +18,7 @@ const chartIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="
 const meta: Meta<typeof DuDock> = {
   title: "Components/Navigation/Dock",
   component: DuDock,
+  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
     items: {

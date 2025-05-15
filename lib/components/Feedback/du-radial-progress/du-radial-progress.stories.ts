@@ -5,6 +5,7 @@ import { computed, ref } from "vue";
 const meta = {
   title: "Components/Feedback/DuRadialProgress",
   component: DuRadialProgress,
+  tags: ['autodocs'],
   tags: ["autodocs"],
   argTypes: {
     value: {

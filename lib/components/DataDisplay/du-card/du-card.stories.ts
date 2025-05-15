@@ -7,6 +7,7 @@ import { useSizeStoriesControl } from '../../../composables/useSizeProps'
 const meta: Meta<typeof DuCard> = {
   title: 'Components/DataDisplay/Card',
   component: DuCard,
+  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
     bordered: { control: 'boolean' },

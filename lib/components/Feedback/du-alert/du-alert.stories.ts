@@ -5,6 +5,7 @@ import { DU_ALERT_VARIANTS, DU_ALERT_DIRECTIONS } from "./du-alert.types";
 const meta: Meta<typeof DuAlert> = {
   title: "Components/Feedback/DuAlert",
   component: DuAlert,
+  tags: ['autodocs'],
   argTypes: {
     variant: {
       control: { type: "select" },

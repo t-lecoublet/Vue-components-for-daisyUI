@@ -6,6 +6,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta: Meta<typeof DuSelect> = {
   title: "Components/DataInput/Select",
   component: DuSelect,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

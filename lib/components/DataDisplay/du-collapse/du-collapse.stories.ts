@@ -5,6 +5,7 @@ import DuButton from '../../../components/Actions/du-button/du-button.vue'
 const meta = {
   title: 'Components/DataDisplay/Collapse',
   component: DuCollapse,
+  tags: ['autodocs'],
   argTypes: {
     items: {
       control: 'object',

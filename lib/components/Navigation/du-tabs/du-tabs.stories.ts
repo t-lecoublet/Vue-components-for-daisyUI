@@ -7,6 +7,7 @@ import { DU_TABS_TYPES } from "./du-tabs.types";
 const meta: Meta<typeof DuTabs> = {
   title: "Components/Navigation/Tabs",
   component: DuTabs,
+  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
     type: {

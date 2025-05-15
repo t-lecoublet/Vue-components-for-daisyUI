@@ -5,6 +5,7 @@ import DuListRow from './du-list-row.vue'
 const meta = {
   title: 'Components/DataDisplay/List',
   component: DuList,
+  tags: ['autodocs'],
   argTypes: {
     class: {
       control: 'text',

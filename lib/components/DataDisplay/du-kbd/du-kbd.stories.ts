@@ -5,6 +5,7 @@ import { useSizeStoriesControl } from '../../../composables/useSizeProps'
 const meta: Meta<typeof DuKbd> = {
   title: 'Components/DataDisplay/Kbd',
   component: DuKbd,
+  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
   },

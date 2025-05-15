@@ -7,6 +7,7 @@ import { ref } from "vue"
 const meta: Meta<typeof DuRange> = {
   title: "Components/DataInput/Range",
   component: DuRange,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

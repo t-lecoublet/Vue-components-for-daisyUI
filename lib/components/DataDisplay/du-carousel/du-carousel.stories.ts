@@ -6,6 +6,7 @@ import DuButton from '../../Actions/du-button/du-button.vue'
 const meta: Meta<typeof DuCarousel> = {
   title: 'Components/DataDisplay/Carousel',
   component: DuCarousel,
+  tags: ['autodocs'],
   argTypes: {
     start: { control: 'boolean', description: 'Snap elements to start' },
     center: { control: 'boolean', description: 'Snap elements to center' },

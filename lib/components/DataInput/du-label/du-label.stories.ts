@@ -6,6 +6,7 @@ import DuSelect from "../du-select/du-select.vue"
 const meta: Meta<typeof DuLabel> = {
   title: "Components/DataInput/Label",
   component: DuLabel,
+  tags: ['autodocs'],
   argTypes: {
     type: {
       control: {

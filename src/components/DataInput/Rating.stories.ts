@@ -7,7 +7,6 @@ import { ref } from "vue";
 const meta: Meta<typeof Rating> = {
   title: "Components/DataInput/Rating",
   component: Rating,
-  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
     modelValue: { control: { type: "number" } },

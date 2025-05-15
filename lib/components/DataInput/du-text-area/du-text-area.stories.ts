@@ -6,6 +6,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta: Meta<typeof DuTextArea> = {
   title: "Components/DataInput/TextArea",
   component: DuTextArea,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

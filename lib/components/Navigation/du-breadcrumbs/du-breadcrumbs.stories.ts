@@ -4,6 +4,7 @@ import DuBreadcrumbs from "./du-breadcrumbs.vue";
 const meta: Meta<typeof DuBreadcrumbs> = {
   title: "Components/Navigation/Breadcrumbs",
   component: DuBreadcrumbs,
+  tags: ['autodocs'],
   argTypes: {
     items: {
       control: "object",

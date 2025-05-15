@@ -3,8 +3,9 @@ import DuFilter from "./du-filter.vue";
 import DuButton from "../../Actions/du-button/du-button.vue";
 
 const meta: Meta<typeof DuFilter> = {
-  title: "Components/DataInput/DuFilter",
+  title: "Components/DataInput/Filter",
   component: DuFilter,
+  tags: ['autodocs'],
   argTypes: {
     items: {
       control: "object",

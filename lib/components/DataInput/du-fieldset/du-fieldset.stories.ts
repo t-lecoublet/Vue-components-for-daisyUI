@@ -7,6 +7,7 @@ import DuButton from "../../Actions/du-button/du-button.vue"
 const meta: Meta<typeof DuFieldset> = {
   title: "Components/DataInput/Fieldset",
   component: DuFieldset,
+  tags: ['autodocs'],
   argTypes: {
     legend: {
       control: { type: "text" },

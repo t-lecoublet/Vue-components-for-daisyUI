@@ -6,6 +6,7 @@ import DuBadge from '../../DataDisplay/du-badge/du-badge.vue'
 const meta = {
   title: 'Components/DataDisplay/Stats',
   component: DuStats,
+  tags: ['autodocs'],
   argTypes: {
     vertical: { control: 'boolean' },
     shadow: { control: 'boolean' },

@@ -7,6 +7,7 @@ import DuButton from '../../Actions/du-button/du-button.vue'
 const meta = {
   title: 'Components/DataDisplay/Countdown',
   component: DuCountdown,
+  tags: ['autodocs'],
   argTypes: {
     value: {
       control: { type: 'number' },

@@ -7,6 +7,7 @@ import { useVariantStoriesControl } from "../../../composables/useVariantProps";
 const meta: Meta<typeof DuPagination> = {
   title: "Components/Navigation/Pagination",
   component: DuPagination,
+  tags: ['autodocs'],
   argTypes: {
     modelValue: {
       control: { type: "number" },

@@ -5,6 +5,7 @@ import DuLink from "./du-link.vue";
 const meta: Meta<typeof DuLink> = {
   title: "Components/Navigation/Link",
   component: DuLink,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     onlyUnderlineOnHover: {

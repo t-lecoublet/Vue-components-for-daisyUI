@@ -8,6 +8,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta = {
   title: "Components/DataDisplay/Table",
   component: DuTable,
+  tags: ['autodocs'],
   argTypes: {
     ...useSizeStoriesControl,
     columns: {

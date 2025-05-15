@@ -6,6 +6,7 @@ import { DU_JOIN_DIRECTIONS } from "./du-join.types";
 const meta: Meta<typeof DuJoin> = {
   title: "Components/Layout/DuJoin",
   component: DuJoin,
+  tags: ['autodocs'],
   argTypes: {
     direction: {
       control: { type: "select" },

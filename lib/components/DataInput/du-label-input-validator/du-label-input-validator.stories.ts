@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import DuLabelInputValidator from "./du-label-input-validator.vue";
-// Pour l'exemple, nous utilisons une icône temporaire puisque nous n'avons pas encore transformé toutes les icônes
 import UserIcon from "../../../../src/components/Icons/UserIcon.vue";
 
 const meta: Meta<typeof DuLabelInputValidator> = {
-  title: "Components/DataInput/DuLabelInputValidator",
+  title: "Components/DataInput/LabelInputValidator",
   component: DuLabelInputValidator,
+  tags: ['autodocs'],
   argTypes: {},
 };
 

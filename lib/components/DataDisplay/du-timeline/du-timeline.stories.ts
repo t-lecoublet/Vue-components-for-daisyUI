@@ -6,6 +6,7 @@ import DuButton from '../../Actions/du-button/du-button.vue'
 const meta = {
   title: 'Components/DataDisplay/Timeline',
   component: DuTimeline,
+  tags: ['autodocs'],
   argTypes: {
     items: {
       control: 'object',

@@ -6,6 +6,7 @@ import { DU_MENU_DIRECTIONS } from "./du-menu.types";
 const meta: Meta<typeof DuMenu> = {
   title: "Components/Navigation/Menu",
   component: DuMenu,
+  tags: ['autodocs'],
   argTypes: {
     direction: {
       control: { type: "select" },

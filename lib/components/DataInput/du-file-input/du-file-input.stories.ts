@@ -6,6 +6,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta: Meta<typeof DuFileInput> = {
   title: "Components/DataInput/FileInput",
   component: DuFileInput,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

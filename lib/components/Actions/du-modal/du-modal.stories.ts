@@ -6,6 +6,7 @@ import { ref } from 'vue'
 const meta: Meta<typeof DuModal> = {
   title: 'Components/Actions/Modal',
   component: DuModal,
+  tags: ['autodocs'],
   argTypes: {
     id: { control: 'text' },
     open: { control: 'boolean' },

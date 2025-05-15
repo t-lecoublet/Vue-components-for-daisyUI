@@ -4,7 +4,6 @@ import Swap from "@/components/Actions/Swap.vue";
 const meta = {
   title: "Components/Actions/Swap",
   component: Swap,
-  // tags: ['autodocs'],
   argTypes: {
     modelValue: {
       control: "boolean",

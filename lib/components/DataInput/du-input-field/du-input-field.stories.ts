@@ -10,6 +10,7 @@ import DuFieldset from "../du-fieldset/du-fieldset.vue"
 const meta: Meta<typeof DuInputField> = {
   title: "Components/DataInput/InputField",
   component: DuInputField,
+  tags: ['autodocs'],
   argTypes: {
     placeholder: {
       control: { type: "text" },

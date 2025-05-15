@@ -6,6 +6,7 @@ import { useVariantStoriesControl } from '../../../composables/useVariantProps'
 const meta: Meta<typeof DuBadge> = {
   title: 'Components/DataDisplay/Badge',
   component: DuBadge,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

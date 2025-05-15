@@ -6,6 +6,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta: Meta<typeof DuCheckbox> = {
   title: "Components/DataInput/Checkbox",
   component: DuCheckbox,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

@@ -8,6 +8,7 @@ import { DU_TOAST_HORIZONTAL_POSITIONS, DU_TOAST_VERTICAL_POSITIONS } from "./du
 const meta: Meta<typeof DuToast> = {
   title: "Components/Feedback/DuToast",
   component: DuToast,
+  tags: ['autodocs'],
   argTypes: {
     horizontalPosition: {
       control: { type: "select" },

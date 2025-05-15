@@ -4,6 +4,7 @@ import DuDiff from './du-diff.vue'
 const meta = {
   title: 'Components/DataDisplay/Diff',
   component: DuDiff,
+  tags: ['autodocs'],
   argTypes: {
     item1: {
       control: 'text',

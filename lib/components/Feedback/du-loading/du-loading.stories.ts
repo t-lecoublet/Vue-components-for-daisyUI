@@ -7,6 +7,7 @@ import { DU_LOADING_ANIMATIONS } from "./du-loading.types";
 const meta: Meta<typeof DuLoading> = {
   title: "Components/Feedback/DuLoading",
   component: DuLoading,
+  tags: ['autodocs'],
   argTypes: {
     animation: {
       control: { type: "select" },

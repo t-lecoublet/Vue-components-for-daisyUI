@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import DuRating from "./du-rating.vue";
-import DuRatingItem from "./du-rating-item.vue";
+import DuRatingItem from "./du-rating-item.vue"
 import { useSizeStoriesControl } from "../../../composables/useSizeProps";
 import { ref } from "vue";
 import { DU_RATING_SHAPES } from "./du-rating.types";
 
 const meta: Meta<typeof DuRating> = {
-  title: "Components/DataInput/DuRating",
+  title: "Components/DataInput/Rating",
   component: DuRating,
   tags: ['autodocs'],
   argTypes: {

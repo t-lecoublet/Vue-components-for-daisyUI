@@ -4,6 +4,7 @@ import DuStatus from './du-status.vue'
 const meta: Meta<typeof DuStatus> = {
   title: 'Components/DataDisplay/Status',
   component: DuStatus,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

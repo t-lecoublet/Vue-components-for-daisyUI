@@ -6,6 +6,7 @@ import { useSizeStoriesControl } from "../../../composables/useSizeProps"
 const meta: Meta<typeof DuRadio> = {
   title: "Components/DataInput/Radio",
   component: DuRadio,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

@@ -7,6 +7,7 @@ import { DU_CHAT_PLACEMENTS } from "./du-chat.types";
 const meta: Meta<typeof DuChat> = {
   title: "Components/DataDisplay/Chat",
   component: DuChat,
+  tags: ['autodocs'],
   argTypes: {
     items: {
       control: "object",

@@ -7,6 +7,7 @@ import { DU_TOOLTIP_POSITIONS } from "./du-tooltip.types";
 const meta: Meta<typeof DuTooltip> = {
   title: "Components/Feedback/DuTooltip",
   component: DuTooltip,
+  tags: ['autodocs'],
   argTypes: {
     dataTip: {
       control: "text",

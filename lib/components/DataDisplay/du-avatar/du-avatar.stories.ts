@@ -4,6 +4,7 @@ import DuAvatar from './du-avatar.vue'
 const meta: Meta<typeof DuAvatar> = {
   title: 'Components/DataDisplay/Avatar',
   component: DuAvatar,
+  tags: ['autodocs'],
   argTypes: {},
 }
 

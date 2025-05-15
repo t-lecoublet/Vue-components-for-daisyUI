@@ -6,6 +6,7 @@ import DuButtonLink from "./du-button-link.vue";
 const meta: Meta<typeof DuButtonLink> = {
   title: "Components/Navigation/ButtonLink",
   component: DuButtonLink,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     ...useSizeStoriesControl,

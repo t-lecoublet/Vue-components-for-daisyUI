@@ -5,6 +5,7 @@ import { useVariantStoriesControl } from "../../../composables/useVariantProps";
 const meta: Meta<typeof DuProgress> = {
   title: "Components/Feedback/DuProgress",
   component: DuProgress,
+  tags: ['autodocs'],
   argTypes: {
     ...useVariantStoriesControl,
     value: { control: "number" },

@@ -6,6 +6,7 @@ import Menu from '../../../components/Navigation/du-menu/du-menu.vue'
 const meta: Meta<typeof DuDropdown> = {
   title: 'Components/Actions/Dropdown',
   component: DuDropdown,
+  tags: ['autodocs'],
   argTypes: {
     hover: { control: 'boolean' },
     open: { control: 'boolean' },

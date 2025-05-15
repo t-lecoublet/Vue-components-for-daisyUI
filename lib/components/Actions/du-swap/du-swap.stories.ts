@@ -4,7 +4,7 @@ import DuSwap from './du-swap.vue'
 const meta = {
   title: 'Components/Actions/Swap',
   component: DuSwap,
-  // tags: ['autodocs'],
+  tags: ['autodocs'],
   argTypes: {
     modelValue: {
       control: 'boolean',
