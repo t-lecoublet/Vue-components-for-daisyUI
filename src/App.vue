@@ -3,7 +3,6 @@ import Alert from "@/components/Feedback/Alert.vue";
 import Badge from "@/components/DataDisplay/Badge.vue";
 import Button from "@/components/Actions/Button.vue";
 import LabelInputValidator from "@/components/DataInput/LabelInputValidator.vue";
-import UserIcon from "@/components/Icons/UserIcon.vue";
 </script>
 
 <template>
@@ -30,7 +29,7 @@ import UserIcon from "@/components/Icons/UserIcon.vue";
       title="Only letters, numbers or dash"
     >
       <template #before>
-        <UserIcon class="h-[1em] opacity-50" />
+        <!-- <UserIcon class="h-[1em] opacity-50" /> -->
       </template>
       <template #hint>
         Must be 3 to 30 characters

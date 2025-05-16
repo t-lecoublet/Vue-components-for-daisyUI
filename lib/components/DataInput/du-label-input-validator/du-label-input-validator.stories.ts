@@ -1,7 +1,26 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 import DuLabelInputValidator from "./du-label-input-validator.vue";
-import UserIcon from "../../../../src/components/Icons/UserIcon.vue";
+import { h } from 'vue';
 
+const UserIconSvg = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <g
+      stroke-linejoin="round"
+      stroke-linecap="round"
+      stroke-width="2.5"
+      fill="none"
+      stroke="currentColor"
+    >
+      <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+      <circle cx="12" cy="7" r="4"></circle>
+    </g>
+  </svg>
+`
+const UserIcon = {
+  render() {
+    return h('div', { innerHTML: UserIconSvg });
+  }
+};
 const meta: Meta<typeof DuLabelInputValidator> = {
   title: "Components/DataInput/LabelInputValidator",
   component: DuLabelInputValidator,
@@ -27,15 +46,15 @@ const UserNameTextInputWithIconAndValidatorTplStr = `
     <UserIcon class="h-[1em] opacity-50" />
   </template>
   <template #hint>
-    Must be 3 to 30 characters
-    <br/>containing only letters, numbers or dash
-  </template>
+// USERNAME TEXT INPUT WITH ICON AND VALIDATOR
+const UserNameTextInputWithIconAndValidatorTemplate: StoryObj = {
+  render: (args: any) => ({
 </DuLabelInputValidator>
 `;
 
 // USERNAME TEXT INPUT WITH ICON AND VALIDATOR
 const UserNameTextInputWithIconAndValidatorTemplate: StoryObj = {
-  render: (args: any) => ({
+  render: (args) => ({
     components: { DuLabelInputValidator, UserIcon },
     setup() {
       return { args };
