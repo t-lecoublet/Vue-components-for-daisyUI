@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { type Size, useSizeMapping } from '../../../composables/useSizeProps'
-import { useVariantMapping, type Variant } from '../../../composables/useVariantProps'
-import { type BUTTONColor, type BUTTONSize } from '@root/lib/components/du-button/du-button.types'
+import { type Size, useSizeMapping } from '@lib/composables/useSizeProps'
+import { useVariantMapping, type Variant } from '@lib/composables/useVariantProps'
+import { type BUTTONColor, type BUTTONSize } from '@lib/components/Actions/du-button/du-button.types'
 import { computed, inject } from 'vue'
 
 type ElementType = 'button' | 'a' | 'input' | 'div'

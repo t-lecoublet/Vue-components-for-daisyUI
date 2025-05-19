@@ -1,6 +1,6 @@
-import DuButton from './du-button.vue'
-import { useSizeStoriesControl } from '../../../composables/useSizeProps'
-import { useVariantStoriesControl } from '../../../composables/useVariantProps'
+import DuButton from '@lib/components/Actions/du-button/du-button.vue'
+import { useSizeStoriesControl } from '@lib/composables/useSizeProps'
+import { useVariantStoriesControl } from '@lib/composables/useVariantProps'
 import type { Meta, StoryObj } from '@storybook/vue3'
 
 const meta: Meta<typeof DuButton> = {

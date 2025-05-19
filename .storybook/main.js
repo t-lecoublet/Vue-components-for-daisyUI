@@ -11,13 +11,13 @@ const config = {
     name: "@storybook/vue3-vite",
     options: {},
   },
-  viteFinal: (config) => {
-    config.css = {
-      preprocessorOptions: {
-        postcss: true,
-      },
-    };
-    return config;
-  },
+  // viteFinal: (config) => {
+  //   config.css = {
+  //     preprocessorOptions: {
+  //       postcss: true,
+  //     },
+  //   };
+  //   return config;
+  // },
 };
 export default config;
