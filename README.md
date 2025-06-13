@@ -1,6 +1,10 @@
-# DaisyUi vue kit
+<div align="center">
+  <img src="./logoLong.svg" alt="Vue + daisyUI Logo" width="300">
+</div>
 
-This is a vue kit for daisyui, it's a simple way to use daisyui in your vue project.
+# Cornet
+
+Cornet is a Vue 3 component library for daisyUI without node_modules limitations, a simple way to use daisyui in your vue project.
 
 ## Important: This Repository Has Moved
 
